@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
-
 import { withFirebase } from '../Firebase';
 import * as ROUTES from '../../constants/routes';
 import * as ROLES from '../../constants/roles';
@@ -11,6 +10,16 @@ const SignUpPage = () => (
         <SignUpForm />
     </div>
 );
+
+const INITIAL_STATE = {
+    username: '',
+    email: '',
+    passwordOne: '',
+    passwordTwo: '',
+    isAdmin: false,
+    error: null,
+};
+
 const ERROR_CODE_ACCOUNT_EXISTS = 'auth/email-already-in-use';
 
 const ERROR_MSG_ACCOUNT_EXISTS = `
@@ -20,14 +29,6 @@ const ERROR_MSG_ACCOUNT_EXISTS = `
   to sign in with one of them. Afterward, associate your accounts
   on your personal account page.
 `;
-const INITIAL_STATE = {
-    username: '',
-    email: '',
-    passwordOne: '',
-    passwordTwo: '',
-    isAdmin: false,
-    error: null,
-};
 
 class SignUpFormBase extends Component {
     constructor(props) {
@@ -48,28 +49,24 @@ class SignUpFormBase extends Component {
             .doCreateUserWithEmailAndPassword(email, passwordOne)
             .then(authUser => {
                 // Create a user in your Firebase realtime database
-                this.props.firebase
-                    .user(authUser.user.uid)
-                    .set({
-                        username,
-                        email,
-                        roles,
-                    })
-                    .then(() => {
-                        return this.props.firebase.doSendEmailVerification();
-                    })
-                    .then(() => {
-                        this.setState({ ...INITIAL_STATE });
-                        this.props.history.push(ROUTES.HOME);
-                    })
-                    .catch(error => {
-                        this.setState({ error });
-                    });
+                return this.props.firebase.user(authUser.user.uid).set({
+                    username,
+                    email,
+                    roles,
+                });
+            })
+            .then(() => {
+                return this.props.firebase.doSendEmailVerification();
+            })
+            .then(() => {
+                this.setState({ ...INITIAL_STATE });
+                this.props.history.push(ROUTES.HOME);
             })
             .catch(error => {
                 if (error.code === ERROR_CODE_ACCOUNT_EXISTS) {
                     error.message = ERROR_MSG_ACCOUNT_EXISTS;
                 }
+
                 this.setState({ error });
             });
 

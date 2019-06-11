@@ -1,4 +1,3 @@
-
 import app from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/database';
@@ -42,14 +41,14 @@ class Firebase {
     doSignInWithTwitter = () =>
         this.auth.signInWithPopup(this.twitterProvider);
 
-    doSendEmailVerification = () =>
-        this.auth.currentUser.sendEmailVerification({
-            url: process.env.REACT_APP_CONFIRMATION_EMAIL_REDIRECT,
-        });
-
     doSignOut = () => this.auth.signOut();
 
     doPasswordReset = email => this.auth.sendPasswordResetEmail(email);
+
+    doSendEmailVerification = () =>
+        this.auth.currentUser.sendEmailVerification({
+            //url: process.env.REACT_APP_CONFIRMATION_EMAIL_REDIRECT,
+        });
 
     doPasswordUpdate = password =>
         this.auth.currentUser.updatePassword(password);
