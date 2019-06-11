@@ -8,15 +8,19 @@ const withAuthentication = Component => {
             super(props);
 
             this.state = {
-                authUser: null,
+                authUser: JSON.parse(localStorage.getItem('authUser')),
             };
         }
+
         componentDidMount() {
-            this.listener = this.props.firebase.auth.onAuthStateChanged(
+            this.listener = this.props.firebase.onAuthUserListener(
                 authUser => {
-                    authUser
-                        ? this.setState({ authUser })
-                        : this.setState({ authUser: null });
+                    localStorage.setItem('authUser', JSON.stringify(authUser));
+                    this.setState({ authUser });
+                },
+                () => {
+                    localStorage.removeItem('authUser');
+                    this.setState({ authUser: null });
                 },
             );
         }
@@ -24,16 +28,17 @@ const withAuthentication = Component => {
         componentWillUnmount() {
             this.listener();
         }
-    render() {
-      return (
-        <AuthUserContext.Provider value={this.state.authUser}>
-          <Component {...this.props} />
-        </AuthUserContext.Provider>
-      );
-    }
-  }
 
-  return withFirebase(WithAuthentication);
+        render() {
+            return (
+                <AuthUserContext.Provider value={this.state.authUser}>
+                    <Component {...this.props} />
+                </AuthUserContext.Provider>
+            );
+        }
+    }
+
+    return withFirebase(WithAuthentication);
 };
 
 export default withAuthentication;
