@@ -19,34 +19,64 @@ const Navigation = () => (
 );
 
 const NavigationAuth = ({ authUser }) => (
-    <ul>
+    <div className = "mainNav">
+        <div className="banner">
+            <p>BANNER IMAGE NEEDED</p>
+        </div>
+        <div className="linksDiv">
+            <div className="userNav">
+                <p>
+                    {authUser.username}
+                </p>
+            </div>
+        <ul className = "lNav">
         <li>
-            <Link to={ROUTES.LANDING}>Landing</Link>
+                    <Link to={ROUTES.LANDING}>
+                        <button type="button" className="lndBtn">
+                            Landing</button>
+                    </Link>
         </li>
         <li>
-            <Link to={ROUTES.HOME}>Home</Link>
+                    <Link to={ROUTES.HOME}>
+                        <button type="button" className="homeBtn">
+                            Home</button>
+                    </Link>
         </li>
-        <li>
-            <Link to={ROUTES.ACCOUNT}>Account</Link>
-        </li>
-        {authUser.roles.includes(ROLES.ADMIN) && (
-            <li>
-                <Link to={ROUTES.ADMIN}>Admin</Link>
-            </li>
-        )}
+                    <li>
+                    <Link to={ROUTES.ACCOUNT}>
+                        <button type="button" className="accountBtn">
+                            Account</button>
+                        </Link>
+                    </li>
+                {authUser.roles.includes(ROLES.ADMIN) && (
+                    <li>
+                        <Link to={ROUTES.ADMIN}>
+                            <button type="button" className="adminBtn">
+                                Admin</button>
+                        </Link>
+                    </li>
+                )}
         <li>
             <SignOutButton />
         </li>
-    </ul>
+        </ul>
+        </div>
+    </div>
 );
 
 const NavigationNonAuth = () => (
-    <ul>
+    <ul className="nlNav">
         <li>
-            <Link to={ROUTES.LANDING}>Landing</Link>
+            <Link to={ROUTES.LANDING}>
+                <button type="button" className="lndBtn">
+                    Landing</button>
+            </Link>
         </li>
         <li>
-            <Link to={ROUTES.SIGN_IN}>Sign In</Link>
+            <Link to={ROUTES.SIGN_IN}>
+                <button type="button" className="signInBtn">
+                    Sign In</button>
+            </Link>
         </li>
     </ul>
 );

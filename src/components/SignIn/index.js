@@ -5,6 +5,7 @@ import { SignUpLink } from '../SignUp';
 import { PasswordForgetLink } from '../PasswordForget';
 import { withFirebase } from '../Firebase';
 import * as ROUTES from '../../constants/routes';
+import { isNewExpression } from '@babel/types';
 
 const SignInPage = () => (
     <div>
@@ -104,21 +105,25 @@ class SignInGoogleBase extends Component {
         this.props.firebase
             .doSignInWithGoogle()
             .then(socialAuthUser => {
-                // Create a user in your Firebase Realtime Database too
-                this.props.firebase
-                    .user(socialAuthUser.user.uid)
-                    .set({
-                        username: socialAuthUser.user.displayName,
-                        email: socialAuthUser.user.email,
-                        roles: [],
-                    })
-                    .then(() => {
-                        this.setState({ error: null });
-                        this.props.history.push(ROUTES.HOME);
-                    })
-                    .catch(error => {
-                        this.setState({ error });
-                    });
+                let isNewU = socialAuthUser.additionalUserInfo.isNewUser;
+                console.log(isNewU)
+                if (isNewU== true) {
+                    // Create a user in your Firebase Realtime Database too
+                    this.props.firebase
+                        .user(socialAuthUser.user.uid)
+                        .set({
+                            username: socialAuthUser.user.displayName,
+                            email: socialAuthUser.user.email,
+                            roles: [],
+                        })
+                        .then(() => {
+                            this.setState({ error: null });
+                            this.props.history.push(ROUTES.HOME);
+                        })
+                        .catch(error => {
+                            this.setState({ error });
+                        });
+                }
             })
             .catch(error => {
                 if (error.code === ERROR_CODE_ACCOUNT_EXISTS) {
@@ -154,21 +159,25 @@ class SignInFacebookBase extends Component {
         this.props.firebase
             .doSignInWithFacebook()
             .then(socialAuthUser => {
-                // Create a user in your Firebase Realtime Database too
-                this.props.firebase
-                    .user(socialAuthUser.user.uid)
-                    .set({
-                        username: socialAuthUser.additionalUserInfo.profile.name,
-                        email: socialAuthUser.additionalUserInfo.profile.email,
-                        roles: [],
-                    })
-                    .then(() => {
-                        this.setState({ error: null });
-                        this.props.history.push(ROUTES.HOME);
-                    })
-                    .catch(error => {
-                        this.setState({ error });
-                    });
+                let isNewU = socialAuthUser.additionalUserInfo.isNewUser;
+                console.log(isNewU)
+                if (isNewU == true) {
+                    // Create a user in your Firebase Realtime Database too
+                    this.props.firebase
+                        .user(socialAuthUser.user.uid)
+                        .set({
+                            username: socialAuthUser.additionalUserInfo.profile.name,
+                            email: socialAuthUser.additionalUserInfo.profile.email,
+                            roles: [],
+                        })
+                        .then(() => {
+                            this.setState({ error: null });
+                            this.props.history.push(ROUTES.HOME);
+                        })
+                        .catch(error => {
+                            this.setState({ error });
+                        });
+                }
             })
             .catch(error => {
                 if (error.code === ERROR_CODE_ACCOUNT_EXISTS) {
@@ -204,21 +213,25 @@ class SignInTwitterBase extends Component {
         this.props.firebase
             .doSignInWithTwitter()
             .then(socialAuthUser => {
-                // Create a user in your Firebase Realtime Database too
-                this.props.firebase
-                    .user(socialAuthUser.user.uid)
-                    .set({
-                        username: socialAuthUser.additionalUserInfo.profile.name,
-                        email: socialAuthUser.additionalUserInfo.profile.email,
-                        roles: [],
-                    })
-                    .then(() => {
-                        this.setState({ error: null });
-                        this.props.history.push(ROUTES.HOME);
-                    })
-                    .catch(error => {
-                        this.setState({ error });
-                    });
+                let isNewU = socialAuthUser.additionalUserInfo.isNewUser;
+                console.log(isNewU)
+                if (isNewU == true) {
+                    // Create a user in your Firebase Realtime Database too
+                    this.props.firebase
+                        .user(socialAuthUser.user.uid)
+                        .set({
+                            username: socialAuthUser.additionalUserInfo.profile.name,
+                            email: socialAuthUser.additionalUserInfo.profile.email,
+                            roles: [],
+                        })
+                        .then(() => {
+                            this.setState({ error: null });
+                            this.props.history.push(ROUTES.HOME);
+                        })
+                        .catch(error => {
+                            this.setState({ error });
+                        });
+                }
             })
             .catch(error => {
                 if (error.code === ERROR_CODE_ACCOUNT_EXISTS) {

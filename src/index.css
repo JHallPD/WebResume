@@ -1,14 +1,104 @@
-body {
-  margin: 0;
-  margin-left: 1%;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html {
+    
+    height: 100%;
+    overflow: hidden;
 }
-
+body {
+    
+    margin: 0%;
+    height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+#root {
+    
+    min-height: 100%;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.mDiv {
+    background-color: #0d8200;
+    color: #ffffff;
+    height: 100%;
+    margin: 2%;
+}
+
+
+/** Navigation CSS **/
+button {
+    background-color: #ffcb00;
+    border-color: #ffe200;
+    height: 38px;
+    width: 68px;
+    align-content: center;
+}
+.signOutBtn {
+
+}
+.adminBtn {
+
+}
+.accountBtn {
+
+}
+.homeBtn {
+
+}
+.lndBtn {
+
+}
+.signInBtn {
+
+}
+
+.mainNav {
+    height: 100%;
+    margin-bottom: -1%;
+    list-style-type: none;
+    background-color: #00c7d4;
+    display: flex;
+    justify-content: space-between;
+}
+.banner {
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+    font-size: 32px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between
+}
+.linksDiv {
+    height: 100%;
+    margin: 0%;
+    margin-right: 2px;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+.userNav {
+    height: 100%;
+    margin-right: 5px;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+ul {
+    height: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+li {
+    display: flex;
+    color: #ffc300;
+    justify-content: space-between;
+    border: 1px solid #b9b9b9;
+    margin: 2px;
 }

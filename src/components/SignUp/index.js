@@ -127,6 +127,7 @@ class SignUpFormBase extends Component {
                     type="password"
                     placeholder="Confirm Password"
                 />
+                {/*
                 <label>
                     Admin:
           <input
@@ -136,6 +137,7 @@ class SignUpFormBase extends Component {
                         onChange={this.onChangeCheckbox}
                     />
                 </label>
+                 */}
                 <button disabled={isInvalid} type="submit">
                     Sign Up
         </button>
