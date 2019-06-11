@@ -25,9 +25,13 @@ const NavigationAuth = ({ authUser }) => (
         </div>
         <div className="linksDiv">
             <div className="userNav">
+                <li>
+                    <Link to={ROUTES.ACCOUNT}> Account </Link>
+                </li>
                 <p>
                     {authUser.username}
                 </p>
+
             </div>
         <ul className = "lNav">
         <li>
@@ -42,12 +46,6 @@ const NavigationAuth = ({ authUser }) => (
                             Home</button>
                     </Link>
         </li>
-                    <li>
-                    <Link to={ROUTES.ACCOUNT}>
-                        <button type="button" className="accountBtn">
-                            Account</button>
-                        </Link>
-                    </li>
                 {authUser.roles.includes(ROLES.ADMIN) && (
                     <li>
                         <Link to={ROUTES.ADMIN}>
