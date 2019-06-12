@@ -6,11 +6,12 @@ import {
     withEmailVerification,
 } from '../Session';
 import { withFirebase } from '../Firebase';
+import { BubbleLoader } from 'react-css-loaders';
 import '../../index.css';
 
 const HomePage = () => (
-    <div className ="mDiv">
-        <h1>Home Page</h1>
+    <div className="mDiv">
+        <h1 className="mTitle">Home Page</h1>
         <p>The Home Page is accessible by every signed in user.</p>
         <Messages />
     </div>
@@ -69,9 +70,10 @@ class MessagesBase extends Component {
         this.props.firebase.messages().push({
             text: this.state.text,
             userId: authUser.uid,
+            userName: authUser.username,
             createdAt: this.props.firebase.serverValue.TIMESTAMP,
         });
-
+        console.log(authUser.username);
         this.setState({ text: '' });
 
         event.preventDefault();
@@ -105,20 +107,20 @@ class MessagesBase extends Component {
                 {authUser => (
                     <div>
                         {!loading && messages && (
-                            <button type="button" onClick={this.onNextPage}>
+                            <button type="button" className="moreBtn" onClick={this.onNextPage}>
                                 More
               </button>
                         )}
 
-                        {loading && <div>Loading ...</div>}
+                        {loading && <BubbleLoader size="20" className="bubbleLoad" />}
 
                         {messages && (
-                            <MessageList
+                            <MessageList className="hmMsgList"
                                 messages={messages.map(message => ({
                                     ...message,
                                     user: users
-                                        ? users[message.userId]
-                                        : { userId: message.userId },
+                                        ? users[message.userName]
+                                        : { userName: message.userName },
                                 }))}
                                 onEditMessage={this.onEditMessage}
                                 onRemoveMessage={this.onRemoveMessage}
@@ -127,17 +129,18 @@ class MessagesBase extends Component {
 
                         {!messages && <div>There are no messages ...</div>}
 
-                        <form
+                        <form className="msgBar"
                             onSubmit={event =>
                                 this.onCreateMessage(event, authUser)
                             }
                         >
                             <input
+                                className="msgTxtBar"
                                 type="text"
                                 value={text}
                                 onChange={this.onChangeText}
                             />
-                            <button type="submit">Send</button>
+                            <button className="msgBarBtn" type="submit">Send</button>
                         </form>
                     </div>
                 )}
@@ -151,7 +154,7 @@ const MessageList = ({
     onEditMessage,
     onRemoveMessage,
 }) => (
-        <ul>
+        <ul className="msgList">
             {messages.map(message => (
                 <MessageItem
                     key={message.uid}
@@ -194,7 +197,7 @@ class MessageItem extends Component {
         const { editMode, editText } = this.state;
 
         return (
-            <li>
+            <li className="msgItem">
                 {editMode ? (
                     <input
                         type="text"
@@ -204,9 +207,9 @@ class MessageItem extends Component {
                 ) : (
                         <span className ="msgTxt">
                             <strong>
-                                {message.user.username || message.user.userId}
+                                {message.user.userName} : 
                             </strong>{' '}
-                            {message.text} {message.editedAt && <span>(Edited)</span>}
+                             {message.text} {message.editedAt && <span>(Edited)</span>}
                         </span>
                     )}
 

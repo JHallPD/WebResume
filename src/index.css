@@ -1,7 +1,6 @@
 html {
     
     height: 100%;
-    overflow: hidden;
 }
 body {
     
@@ -23,45 +22,68 @@ code {
     background-color: #0d8200;
     color: #ffffff;
     height: 100%;
-    margin: 2%;
+    margin-left: 0%;
+    margin-right: 0%;
 }
 
 
 /** Navigation CSS **/
-button {
-    background-color: #ffcb00;
-    border-color: #ffe200;
-    height: 38px;
-    width: 68px;
-    align-content: center;
+Button {
+    height: 44px;
+    width: 88px;
 }
 .signOutBtn {
-
+    padding:0px;
 }
 .adminBtn {
-
+    padding: 0px;
 }
 .accountBtn {
-
+    padding: 0px;
 }
 .homeBtn {
-
+    padding: 0px;
 }
 .lndBtn {
-
+    padding: 0px;
 }
 .signInBtn {
-
+    padding: 0px;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #00e0ff;
+    border-color: #00daf8;
+}
+    .btn-primary:hover {
+        color: #fff;
+        background-color: #00bdd7;
+        border-color: #00b7d0;
+    }
+btn-danger {
+    color: #fff;
+    padding:-2px -6px -2px -6px;
+    background-color: #dc3545;
+    border-color: #dc3545
 }
 
+.btn-danger:hover {
+    color: #fff;
+    background-color: #c82333;
+    border-color: #bd2130
+}
+
+.btn-danger.focus, .btn-danger:focus {
+    box-shadow: 0 0 0 .2rem rgba(225,83,97,.5)
+}
 .mainNav {
     height: 100%;
-    margin-bottom: -1%;
+    margin-bottom: 0%;
     list-style-type: none;
-    background-color: #00c7d4;
+    background-color: #d4af00;
     display: flex;
     justify-content: space-between;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid rgba(40, 40, 40, 0.52)
 }
 .banner {
     height: 100%;
@@ -92,6 +114,7 @@ button {
 ul {
     height: 100%;
     list-style-type: none;
+    margin:0px;
 }
 .lNav {
     display: flex;
@@ -100,9 +123,8 @@ ul {
 }
 li {
     display: flex;
-    color: #ffc300;
-    border: 1px solid #b9b9b9;
     margin: 2px;
+    padding:0px;
 }
 
 /** Home **/
@@ -132,4 +154,40 @@ bubbleLoad {
     align-content: center;
     margin-left: 1px;
     margin-right: 1px;
+}
+.mTitle {
+    margin: 0px;
+}
+.msgBar {
+    display:flex;
+    margin-left: 2px;
+    margin-right: 1px;
+    margin-bottom: 4px;
+    margin-top:1px;
+}
+.msgTxtBar {
+    flex:6;
+    font-size:x-large;
+    text-anchor:start;
+}
+.msgBarBtn {
+    margin-right:1px;
+}
+.msgList {
+    flex-direction:column;
+    justify-content:center; 
+    align-items:stretch;
+    margin:0px;
+    padding-left:4px;
+}
+.msgItem {
+    display: flex;
+    flex:10;
+    font-size:large;
+}
+.hmMsgList {
+    margin-top: 2px;
+}
+.moreBtn {
+    margin: 2px;
 }

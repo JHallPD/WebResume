@@ -5,7 +5,7 @@ import { withFirebase } from '../Firebase';
 import { withAuthorization, withEmailVerification } from '../Session';
 import * as ROLES from '../../constants/roles';
 import * as ROUTES from '../../constants/routes';
-import { BarLoader, BubbleLoader } from 'react-css-loaders';
+import { BubbleLoader } from 'react-css-loaders';
 import '../../index.css';
 
 const AdminPage = () => (

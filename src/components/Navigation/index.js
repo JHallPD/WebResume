@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import Button from 'react-bootstrap/Button';
 import { AuthUserContext } from '../Session';
 import SignOutButton from '../SignOut';
 import * as ROUTES from '../../constants/routes';
@@ -36,21 +36,21 @@ const NavigationAuth = ({ authUser }) => (
         <ul className = "lNav">
         <li>
                     <Link to={ROUTES.LANDING}>
-                        <button type="button" className="lndBtn">
-                            Landing</button>
+                        <Button type="Button"  className="lndBtn">
+                            Landing</Button>
                     </Link>
         </li>
         <li>
                     <Link to={ROUTES.HOME}>
-                        <button type="button" className="homeBtn">
-                            Home</button>
+                        <Button type="button" className="homeBtn">
+                            Home</Button>
                     </Link>
         </li>
                 {authUser.roles.includes(ROLES.ADMIN) && (
                     <li>
                         <Link to={ROUTES.ADMIN}>
-                            <button type="button" className="adminBtn">
-                                Admin</button>
+                            <Button type="button" variant="success" className="adminBtn">
+                                Admin</Button>
                         </Link>
                     </li>
                 )}
