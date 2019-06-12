@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Button from 'react-bootstrap/Button';
+import { Button, Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import { AuthUserContext } from '../Session';
 import SignOutButton from '../SignOut';
 import * as ROUTES from '../../constants/routes';
@@ -19,14 +19,40 @@ const Navigation = () => (
 );
 
 const NavigationAuth = ({ authUser }) => (
-    <div className = "mainNav">
+    <Navbar className="mainNav">
+        <Navbar.Brand className="banner">Navbar with text</Navbar.Brand>
+        <Navbar.Toggle />
+        <Navbar.Collapse className="justify-content-end">
+            <Navbar.Text>
+                
+            </Navbar.Text>
+            <Nav className="mr-auto">
+                <Nav.Link href="#home">Home</Nav.Link>
+                <Nav.Link href="#link">Link</Nav.Link>
+                <NavDropdown title={"Sign In as: "+authUser.username} id="basic-nav-dropdown">
+                    <NavDropdown.Item href="#Account">
+                        <Link to={ROUTES.ACCOUNT}> Account </Link>
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                    <NavDropdown.Divider />
+                    <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                </NavDropdown>
+            </Nav>
+        </Navbar.Collapse>
+    </Navbar>
+
+);
+
+/*
+      <div className = "mainNav">
         <div className="banner">
             <p>BANNER IMAGE NEEDED</p>
         </div>
         <div className="linksDiv">
             <div className="userNav">
                 <li>
-                    <Link to={ROUTES.ACCOUNT}> Account </Link>
+                    
                 </li>
                 <p>
                     {authUser.username}
@@ -60,9 +86,22 @@ const NavigationAuth = ({ authUser }) => (
         </ul>
         </div>
     </div>
-);
-
+ */
 const NavigationNonAuth = () => (
+    <div className="mainNav">
+        <div className="banner">
+            <p>BANNER IMAGE NEEDED</p>
+        </div>
+        <div className="linksDiv">
+        <div className="userNav">
+            <li>
+                <Link to={ROUTES.ACCOUNT}> Account </Link>
+            </li>
+            <p>
+                Please Sign In
+            </p>
+
+        </div>
     <ul className="lNav">
         <li>
             <Link to={ROUTES.LANDING}>
@@ -76,7 +115,9 @@ const NavigationNonAuth = () => (
                     Sign In</button>
             </Link>
         </li>
-    </ul>
+            </ul>
+            </div>
+        </div>
 );
 
 export default Navigation;

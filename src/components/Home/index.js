@@ -8,6 +8,8 @@ import {
 import { withFirebase } from '../Firebase';
 import { BubbleLoader } from 'react-css-loaders';
 import '../../index.css';
+import Button from 'react-bootstrap/Button';
+import Navbar from 'react-bootstrap/Navbar'
 
 const HomePage = () => (
     <div className="mDiv">
@@ -107,9 +109,9 @@ class MessagesBase extends Component {
                 {authUser => (
                     <div>
                         {!loading && messages && (
-                            <button type="button" className="moreBtn" onClick={this.onNextPage}>
+                            <Button type="button" variant="info" className="moreBtn" onClick={this.onNextPage}>
                                 More
-              </button>
+              </Button>
                         )}
 
                         {loading && <BubbleLoader size="20" className="bubbleLoad" />}
@@ -140,7 +142,7 @@ class MessagesBase extends Component {
                                 value={text}
                                 onChange={this.onChangeText}
                             />
-                            <button className="msgBarBtn" type="submit">Send</button>
+                            <Button className="msgBarBtn" variant="light" type="submit">Send</Button>
                         </form>
                     </div>
                 )}
@@ -215,20 +217,21 @@ class MessageItem extends Component {
 
                 {editMode ? (
                     <span className="msgBtns">
-                        <button className="msgSav" onClick={this.onSaveEditText}>Save</button>
-                        <button className="msgRes" onClick={this.onToggleEditMode}>Reset</button>
+                        <Button className="msgSav" variant="warning" onClick={this.onSaveEditText}>Save</Button>
+                        <Button className="msgRes" variant="warning" onClick={this.onToggleEditMode}>Reset</Button>
                     </span>
                 ) : (
-                        <button className="msgEdt" onClick={this.onToggleEditMode}>Edit</button>
+                        <Button className="msgEdt" variant="warning" onClick={this.onToggleEditMode}>Edit</Button>
                     )}
 
                 {!editMode && (
-                    <button className ="msgDel"
+                    <Button className="msgDel"
+                        variant="danger"
                         type="button"
                         onClick={() => onRemoveMessage(message.uid)}
                     >
                         Delete
-          </button>
+          </Button>
                 )}
             </li>
         );
