@@ -7,9 +7,9 @@
     "\\src\\components\\Admin",
     "\\src\\components\\App",
     "\\src\\components\\Firebase",
-    "\\src\\components\\Home",
-    "\\src\\components\\Landing",
-    "\\src\\components\\Navigation"
+    "\\src\\components\\SignIn",
+    "\\src\\components\\SignOut",
+    "\\src\\components\\SignUp"
   ],
   "SelectedNode": "\\src\\components\\Home\\index.js",
   "PreviewInSolutionExplorer": false

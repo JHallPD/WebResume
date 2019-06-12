@@ -1,30 +1,26 @@
 html {
     
-    height: 100%;
+    height: 100vh;
+    width: 100%;
 }
 body {
     
     margin: 0%;
-    height: 100%;
+    height: 100vh;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 #root {
     
-    min-height: 100%;
+    min-height: 100vh;
+    min-width:100vh;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-.mDiv {
-    background-color: #0d8200;
-    color: #ffffff;
-    height: 100%;
-    margin-left: 0%;
-    margin-right: 0%;
-}
+
 
 
 /** Navigation CSS **/
@@ -32,8 +28,26 @@ Button {
     height: 44px;
     width: 88px;
 }
+.dropdown-menu {
+    padding: 0px;
+    border-radius: .34rem;
+    background-color: #d4af00;
+}
+.dropdown-divider {
+    padding: 0px;
+    margin: 1px 0px 1px 0px;
+    border-top: 2px solid #bebebe;
+}
 .signOutBtn {
+    height: 100%;
+    width:100%;
     padding:0px;
+
+}
+.signOutBox {
+    height: 100%;
+    width: 100%;
+    padding: 0px;
 }
 .adminBtn {
     padding: 0px;
@@ -77,8 +91,9 @@ btn-danger {
     box-shadow: 0 0 0 .2rem rgba(225,83,97,.5)
 }
 .mainNav {
-    height: 100%;
+    height: 6vh;
     margin-bottom: 0%;
+    padding-left:6px;
     list-style-type: none;
     background-color: #d4af00;
     display: flex;
@@ -131,6 +146,13 @@ li {
 bubbleLoad {
     color: blue;
 }
+.mDiv {
+    background-color: #0d8200;
+    color: #ffffff;
+    height: 94vh;
+    margin-left: 0%;
+    margin-right: 0%;
+}
 .msgBtn {
     display: flex;
     margin-left: 1px;
@@ -140,10 +162,11 @@ bubbleLoad {
 }
 .msgTxt {
     display: flex;
-    color:white;
+    color: white;
     flex: 1;
     justify-content: flex-start;
     align-items: center;
+    padding-left: 4px;
 }
 .msgEdt {
     align-content: center;
@@ -156,7 +179,11 @@ bubbleLoad {
     margin-right: 1px;
 }
 .mTitle {
-    margin: 0px;
+    text-align:center;
+    align-content:center;
+    align-items:center;
+    justify-content:center;
+
 }
 .msgBar {
     display:flex;
@@ -169,6 +196,7 @@ bubbleLoad {
     flex:6;
     font-size:x-large;
     text-anchor:start;
+
 }
 .msgBarBtn {
     margin-right:1px;
@@ -183,6 +211,7 @@ bubbleLoad {
 .msgItem {
     display: flex;
     flex:10;
+    border: 1px solid black;
     font-size:large;
 }
 .hmMsgList {
@@ -190,4 +219,8 @@ bubbleLoad {
 }
 .moreBtn {
     margin: 2px;
+}
+.hmDeck {
+    padding: 0px;
+    margin: 10px;
 }
