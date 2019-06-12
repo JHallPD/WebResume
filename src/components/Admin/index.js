@@ -5,6 +5,8 @@ import { withFirebase } from '../Firebase';
 import { withAuthorization, withEmailVerification } from '../Session';
 import * as ROLES from '../../constants/roles';
 import * as ROUTES from '../../constants/routes';
+import { BarLoader, BubbleLoader } from 'react-css-loaders';
+import '../../index.css';
 
 const AdminPage = () => (
     <div>
@@ -56,7 +58,7 @@ class UserListBase extends Component {
         return (
             <div>
                 <h2>Users</h2>
-                {loading && <div>Loading ...</div>}
+                {loading && <BubbleLoader size="20" className="bubbleLoad"/>}
                 <ul>
                     {users.map(user => (
                         <li key={user.uid}>
@@ -129,7 +131,7 @@ class UserItemBase extends Component {
         return (
             <div>
                 <h2>User ({this.props.match.params.id})</h2>
-                {loading && <div>Loading ...</div>}
+                {loading && <BubbleLoader size="20" className="bubbleLoad"/>}
 
                 {user && (
                     <div>

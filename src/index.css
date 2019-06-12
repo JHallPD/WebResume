@@ -61,6 +61,7 @@ button {
     background-color: #00c7d4;
     display: flex;
     justify-content: space-between;
+    border-bottom: 2px solid black;
 }
 .banner {
     height: 100%;
@@ -91,14 +92,44 @@ button {
 ul {
     height: 100%;
     list-style-type: none;
+}
+.lNav {
     display: flex;
     justify-content: space-between;
-    align-items:center;
+    align-items: center;
 }
 li {
     display: flex;
     color: #ffc300;
-    justify-content: space-between;
     border: 1px solid #b9b9b9;
     margin: 2px;
+}
+
+/** Home **/
+bubbleLoad {
+    color: blue;
+}
+.msgBtn {
+    display: flex;
+    margin-left: 1px;
+    margin-right: 1px;
+    justify-content: flex-end;
+    align-items: center;
+}
+.msgTxt {
+    display: flex;
+    color:white;
+    flex: 1;
+    justify-content: flex-start;
+    align-items: center;
+}
+.msgEdt {
+    align-content: center;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+.msgDel {
+    align-content: center;
+    margin-left: 1px;
+    margin-right: 1px;
 }

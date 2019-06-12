@@ -4,16 +4,13 @@
     "\\src",
     "\\src\\components",
     "\\src\\components\\Account",
+    "\\src\\components\\Admin",
     "\\src\\components\\App",
     "\\src\\components\\Firebase",
     "\\src\\components\\Home",
     "\\src\\components\\Landing",
-    "\\src\\components\\PasswordForget",
-    "\\src\\components\\Session",
-    "\\src\\components\\SignIn",
-    "\\src\\components\\SignOut",
-    "\\src\\constants"
+    "\\src\\components\\Navigation"
   ],
-  "SelectedNode": "\\src\\index.css",
+  "SelectedNode": "\\src\\components\\Home\\index.js",
   "PreviewInSolutionExplorer": false
 }

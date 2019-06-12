@@ -63,7 +63,7 @@ const NavigationAuth = ({ authUser }) => (
 );
 
 const NavigationNonAuth = () => (
-    <ul className="nlNav">
+    <ul className="lNav">
         <li>
             <Link to={ROUTES.LANDING}>
                 <button type="button" className="lndBtn">

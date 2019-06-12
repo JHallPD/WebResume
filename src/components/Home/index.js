@@ -202,7 +202,7 @@ class MessageItem extends Component {
                         onChange={this.onChangeEditText}
                     />
                 ) : (
-                        <span>
+                        <span className ="msgTxt">
                             <strong>
                                 {message.user.username || message.user.userId}
                             </strong>{' '}
@@ -211,16 +211,16 @@ class MessageItem extends Component {
                     )}
 
                 {editMode ? (
-                    <span>
-                        <button onClick={this.onSaveEditText}>Save</button>
-                        <button onClick={this.onToggleEditMode}>Reset</button>
+                    <span className="msgBtns">
+                        <button className="msgSav" onClick={this.onSaveEditText}>Save</button>
+                        <button className="msgRes" onClick={this.onToggleEditMode}>Reset</button>
                     </span>
                 ) : (
-                        <button onClick={this.onToggleEditMode}>Edit</button>
+                        <button className="msgEdt" onClick={this.onToggleEditMode}>Edit</button>
                     )}
 
                 {!editMode && (
-                    <button
+                    <button className ="msgDel"
                         type="button"
                         onClick={() => onRemoveMessage(message.uid)}
                     >
