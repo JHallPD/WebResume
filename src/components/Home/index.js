@@ -17,7 +17,7 @@ import { CardDeck,Card } from 'react-bootstrap';
 const HomePage = () => (
     <div className="mDiv">
         <div className="mTitle">
-        <h1 >JEFF HALL NEEDS A FUCKING JOB</h1>
+        <h1 >JEFF HALL NEEDS A JOB</h1>
             <p>THIS IS WHERE ALL THE RESUME INFORMATION WILL BE</p>
         </div>
         <div>
