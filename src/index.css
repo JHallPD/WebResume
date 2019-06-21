@@ -104,19 +104,21 @@ btn-danger {
     height: 100%;
     width: 100%;
     margin: 0%;
-    font-size: 32px;
+    font-size: 28px;
     list-style-type: none;
-    display: flex;
+    display: inline-flex;
+    align-self: center;
+    align-items: center;
     justify-content: space-between
 }
-.linksDiv {
-    height: 100%;
-    margin: 0%;
-    margin-right: 2px;
-    list-style-type: none;
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: column;
+.links {
+    display: inline-flex;
+    align-self:center;
+    align-items: center;
+    padding: 0px 2px 0px 2px;
+}
+.dropdown-item {
+    text-align:center;
 }
 .userNav {
     height: 100%;
@@ -149,7 +151,7 @@ bubbleLoad {
 .mDiv {
     background-color: #0d8200;
     color: #ffffff;
-    height: 94vh;
+    height: 100%;
     margin-left: 0%;
     margin-right: 0%;
 }

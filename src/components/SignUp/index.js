@@ -127,17 +127,6 @@ class SignUpFormBase extends Component {
                     type="password"
                     placeholder="Confirm Password"
                 />
-                {/*
-                <label>
-                    Admin:
-          <input
-                        name="isAdmin"
-                        type="checkbox"
-                        checked={isAdmin}
-                        onChange={this.onChangeCheckbox}
-                    />
-                </label>
-                 */}
                 <button disabled={isInvalid} type="submit">
                     Sign Up
         </button>
@@ -154,7 +143,7 @@ const SignUpLink = () => (
     </p>
 );
 const SignUpLinkBtn = () => (
-        <Link to={ROUTES.SIGN_UP}>Sign Up</Link>
+    <Link to={ROUTES.SIGN_UP} >Sign Up</Link>
 );
 const SignUpForm = withRouter(withFirebase(SignUpFormBase));
 export default SignUpPage;

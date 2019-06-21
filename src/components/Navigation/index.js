@@ -6,6 +6,7 @@ import SignOutButton from '../SignOut';
 import * as ROUTES from '../../constants/routes';
 import * as ROLES from '../../constants/roles';
 import { SignUpLinkBtn } from '../SignUp';
+import '../../index.css';
 
 const Navigation = () => (
     <AuthUserContext.Consumer>
@@ -22,21 +23,17 @@ const Navigation = () => (
 const NavigationAuth = ({ authUser }) => (
     <Navbar className="mainNav">
         <Navbar.Brand className="banner">BANNER IMAGE NEEDED</Navbar.Brand>
-        <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
-            <Navbar.Text>
-                TEST TEXT
-            </Navbar.Text>
-            <Nav className="mr-auto">
-                <Link href="#home" to={ROUTES.HOME}>Home</Link>
-                <Link href="#link" to={ROUTES.LANDING}>Landing</Link>
-                <NavDropdown title={"Sign In as: "+authUser.username} id="basic-nav-dropdown">
+            <Nav >
+                <Link className="links" href="#home" to={ROUTES.HOME}>Home</Link>
+                <Link className="links" href="#link" to={ROUTES.LANDING}>Landing</Link>
+                <NavDropdown title={"Signed In as: "+authUser.username} id="basic-nav-dropdown">
                     <NavDropdown.Item href="#Account">
-                        <Link to={ROUTES.ACCOUNT}> Account </Link>
+                        <Link className="links" to={ROUTES.ACCOUNT}> Account </Link>
                     </NavDropdown.Item>
                     {authUser.roles.includes(ROLES.ADMIN) && (                   
                     <NavDropdown.Item href="#Admin">
-                        <Link to={ROUTES.ADMIN}>Admin</Link>
+                            <Link  to={ROUTES.ADMIN}>Admin</Link>
                     </NavDropdown.Item>)}
                     <NavDropdown.Divider />
                         <SignOutButton />
@@ -56,7 +53,7 @@ const NavigationNonAuth = () => (
             <Navbar.Text>
                 TEST TEXT
             </Navbar.Text>
-            <Nav className="mr-auto">
+            <Nav className="linksDiv">
                 <Link to={ROUTES.LANDING}>Landing</Link>
                 <NavDropdown title={"Please Sign In"} alignRight id="basic-nav-dropdown">
                     <NavDropdown.Item href="#SignIn">
@@ -64,7 +61,7 @@ const NavigationNonAuth = () => (
                     </NavDropdown.Item>
                     <NavDropdown.Divider />
                     <NavDropdown.Item href="#SignUp">
-                        <SignUpLinkBtn />
+                        <Link variant="secondary">Sign Up Disabled</Link>
                     </NavDropdown.Item>
                 </NavDropdown>
             </Nav>
