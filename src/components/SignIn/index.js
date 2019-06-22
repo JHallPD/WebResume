@@ -15,9 +15,8 @@ const SignInPage = () => (
         <SignInFacebook />
         <SignInTwitter />
         <PasswordForgetLink />
-        {/**<SignUpLink />
-         * Remove brackets to sign up if desired. 
-         * No real functionality included**/}
+        <SignUpLink />
+
     </div>
 );
 const ERROR_CODE_ACCOUNT_EXISTS =

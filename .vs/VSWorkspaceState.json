@@ -1,16 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\public",
     "\\src",
     "\\src\\components",
-    "\\src\\components\\Navigation",
-    "\\src\\components\\PasswordChange",
+    "\\src\\components\\App",
+    "\\src\\components\\Firebase",
+    "\\src\\components\\Home",
     "\\src\\components\\PasswordForget",
     "\\src\\components\\Session",
     "\\src\\components\\SignIn",
     "\\src\\components\\SignUp"
   ],
-  "SelectedNode": "\\src\\components\\Home\\index.js",
+  "SelectedNode": "\\.gitignore",
   "PreviewInSolutionExplorer": false
 }

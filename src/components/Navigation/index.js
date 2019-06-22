@@ -61,7 +61,7 @@ const NavigationNonAuth = () => (
                     </NavDropdown.Item>
                     <NavDropdown.Divider />
                     <NavDropdown.Item href="#SignUp">
-                        <Link variant="secondary">Sign Up Disabled</Link>
+                        <Link to={ROUTES.SIGN_UP}>Sign Up</Link>
                     </NavDropdown.Item>
                 </NavDropdown>
             </Nav>
