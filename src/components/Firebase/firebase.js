@@ -10,7 +10,8 @@ const config = {
     storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
     messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
 };
-
+//firebase functionality
+//aditions required for database & hosting
 class Firebase {
     constructor() {
         app.initializeApp(config);

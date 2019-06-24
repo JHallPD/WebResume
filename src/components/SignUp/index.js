@@ -3,7 +3,7 @@ import { Link, withRouter } from 'react-router-dom';
 import { withFirebase } from '../Firebase';
 import * as ROUTES from '../../constants/routes';
 import * as ROLES from '../../constants/roles';
-
+//sign up page shell
 const SignUpPage = () => (
     <div>
         <h1>SignUp</h1>
@@ -29,14 +29,15 @@ const ERROR_MSG_ACCOUNT_EXISTS = `
   to sign in with one of them. Afterward, associate your accounts
   on your personal account page.
 `;
-
+// signup component used to render signup page + logic. 
+// in the future I will seperate the functionality from the page layout
 class SignUpFormBase extends Component {
     constructor(props) {
         super(props);
 
         this.state = { ...INITIAL_STATE };
     }
-
+    //on submit for the form, allows for admin creation if desired
     onSubmit = event => {
         const { username, email, passwordOne, isAdmin } = this.state;
         const roles = [];
@@ -80,7 +81,8 @@ class SignUpFormBase extends Component {
     onChangeCheckbox = event => {
         this.setState({ [event.target.name]: event.target.checked });
     };
-
+    //signup form render.
+    //requires error handling and unit testing
     render() {
         const {
             username,
@@ -127,7 +129,7 @@ class SignUpFormBase extends Component {
                     type="password"
                     placeholder="Confirm Password"
                 />
-                <button disabled={isInvalid} type="submit">
+                <button type="submit">
                     Sign Up
         </button>
 
@@ -136,7 +138,7 @@ class SignUpFormBase extends Component {
         );
     }
 }
-
+//simple link compenent + button to route to sign up
 const SignUpLink = () => (
     <p>
         Don't have an account? <Link to={ROUTES.SIGN_UP}>Sign Up</Link>

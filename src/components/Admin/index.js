@@ -7,7 +7,8 @@ import * as ROLES from '../../constants/roles';
 import * as ROUTES from '../../constants/routes';
 import { BubbleLoader } from 'react-css-loaders';
 import '../../index.css';
-
+//admin page to display user database
+//requires more functionality to interact with created users
 const AdminPage = () => (
     <div>
         <h1>Admin</h1>

@@ -5,7 +5,9 @@ import PasswordChangeForm from '../PasswordChange';
 import { withFirebase } from '../Firebase';
 import { compose } from 'recompose';
 
-
+//functionality for account linking 
+//all signIn methods can be linked to one account
+//accounts need to be expanded on to allow for more use then just home page access
 const SIGN_IN_METHODS = [
     {
         id: 'password',

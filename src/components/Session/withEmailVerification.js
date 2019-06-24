@@ -9,7 +9,7 @@ const needsEmailVerification = authUser =>
     authUser.providerData
         .map(provider => provider.providerId)
         .includes('password');
-
+//simple email verification using firebase
 const withEmailVerification = Component => {
     class WithEmailVerification extends React.Component {
         constructor(props) {

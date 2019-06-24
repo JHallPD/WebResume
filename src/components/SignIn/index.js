@@ -33,7 +33,9 @@ const INITIAL_STATE = {
     password: '',
     error: null,
 };
-
+//basic sign up form using email and password
+//very basic error handling
+//all forms requires unit testing
 class SignInFormBase extends Component {
     constructor(props) {
         super(props);
@@ -94,7 +96,7 @@ class SignInFormBase extends Component {
         );
     }
 }
-
+//google sign in, 
 class SignInGoogleBase extends Component {
     constructor(props) {
         super(props);
@@ -106,6 +108,8 @@ class SignInGoogleBase extends Component {
         this.props.firebase
             .doSignInWithGoogle()
             .then(socialAuthUser => {
+                //if the user is new create an account
+                //otherwise log in
                 let isNewU = socialAuthUser.additionalUserInfo.isNewUser;
                 console.log(isNewU)
                 if (isNewU== true) {
@@ -151,7 +155,7 @@ class SignInGoogleBase extends Component {
         );
     }
 }
-
+//facebook sign in similar to the google sign in
 class SignInFacebookBase extends Component {
     constructor(props) {
         super(props);
@@ -208,7 +212,7 @@ class SignInFacebookBase extends Component {
         );
     }
 }
-
+//twitter sign in similar to the google sign in
 class SignInTwitterBase extends Component {
     constructor(props) {
         super(props);
@@ -265,7 +269,7 @@ class SignInTwitterBase extends Component {
         );
     }
 }
-
+//composing the form components
 const SignInForm = compose(
     withRouter,
     withFirebase,

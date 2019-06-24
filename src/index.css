@@ -1,3 +1,4 @@
+/** CSS not final mostly used for structure and layout currently **/
 html {
     
     height: 100vh;
@@ -226,3 +227,5 @@ bubbleLoad {
     padding: 0px;
     margin: 10px;
 }
+
+/** Landing CSS **/

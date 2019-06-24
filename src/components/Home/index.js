@@ -13,7 +13,11 @@ import Button from 'react-bootstrap/Button';
 import { CardDeck,Card } from 'react-bootstrap';
 
 
-
+//home page currently filled with resume text.
+//logic will be added to pull the text from a resume stored on the back end
+//cards will pull github repos to display
+//will add a contact form at the bottom to allow for email/telephone contact
+//potential for chat bot
 const HomePage = () => (
     <div className="mDiv">
         <div className="mTitle">
@@ -83,9 +87,10 @@ const HomePage = () => (
 
 
         </div>
+        {/** CardDeck for projects **/}
         <CardDeck className="hmDeck">
             <Card>
-                <Card.Img variant="top" src="./././286x180.svg" alt="Please hire me oh god the pain" />
+                <Card.Img variant="top" src="./././286x180.svg" alt="Jeff Facts 1" />
                 <Card.Body>
                     <Card.Title>Card title</Card.Title>
                     <Card.Text>
@@ -94,11 +99,11 @@ const HomePage = () => (
       </Card.Text>
                 </Card.Body>
                 <Card.Footer>
-                    <small className="text-muted">I beg you</small>
+                    <small className="text-muted">Place holder</small>
                 </Card.Footer>
             </Card>
             <Card>
-                <Card.Img variant="top" src="./././286x180.svg" alt="Please hire me oh god the pain" />
+                <Card.Img variant="top" src="./././286x180.svg" alt="Jeff Facts 2" />
                 <Card.Body>
                     <Card.Title>Card title</Card.Title>
                     <Card.Text>
@@ -107,15 +112,15 @@ const HomePage = () => (
                     </Card.Text>
                 </Card.Body>
                 <Card.Footer>
-                    <small className="text-muted">Please</small>
+                    <small className="text-muted">Place holder</small>
                 </Card.Footer>
             </Card>
             <Card className="bg-dark text-white">
-                <Card.Img src="./././286x180.svg" alt="Card image" />
+                <Card.Img src="./././286x180.svg" alt="Jeff Facts 3" />
                 <Card.ImgOverlay>
-                    <Card.Title>HIRE ME</Card.Title>
+                    <Card.Title>Card title</Card.Title>
                     <Card.Text>
-                        PLEASE :(
+                        Information
                     </Card.Text>
                     <Card.Text>Last updated 3 mins ago</Card.Text>
                 </Card.ImgOverlay>
