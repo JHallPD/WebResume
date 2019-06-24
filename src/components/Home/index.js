@@ -5,7 +5,6 @@ import {
     withAuthorization,
     withEmailVerification,
 } from '../Session';
-
 import { withFirebase } from '../Firebase';
 import { BubbleLoader } from 'react-css-loaders';
 import '../../index.css';
@@ -90,7 +89,7 @@ const HomePage = () => (
         {/** CardDeck for projects **/}
         <CardDeck className="hmDeck">
             <Card>
-                <Card.Img variant="top" src="./././286x180.svg" alt="Jeff Facts 1" />
+                <Card.Img variant="top" src={"./././286x180.svg"} alt="Jeff Facts 1" />
                 <Card.Body>
                     <Card.Title>Card title</Card.Title>
                     <Card.Text>

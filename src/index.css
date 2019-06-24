@@ -94,22 +94,24 @@ btn-danger {
 .mainNav {
     height: 6vh;
     margin-bottom: 0%;
-    padding-left:6px;
+    padding-left: 6px;
     list-style-type: none;
     background-color: #d4af00;
     display: flex;
     justify-content: space-between;
-    border-bottom: 2px solid rgba(40, 40, 40, 0.52)
+    border-bottom: 2px solid rgba(40, 40, 40, 0.52);
+    background-image: url('images/1102x250.svg');
 }
 .banner {
     height: 100%;
     width: 100%;
-    margin: 0%;
+    margin: 0px 0px 0px 6px;
     font-size: 28px;
     list-style-type: none;
     display: inline-flex;
     align-self: center;
     align-items: center;
+    
     justify-content: space-between
 }
 .links {

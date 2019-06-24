@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Button, Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import { Button, Navbar, Nav, NavDropdown, Image } from 'react-bootstrap';
 import { AuthUserContext } from '../Session';
 import SignOutButton from '../SignOut';
 import * as ROUTES from '../../constants/routes';
@@ -20,9 +20,11 @@ const Navigation = () => (
     </AuthUserContext.Consumer>
 );
 //simple navbar for AuthUsers
+//added background image to css
 const NavigationAuth = ({ authUser }) => (
-    <Navbar className="mainNav">
-        <Navbar.Brand className="banner">BANNER IMAGE NEEDED</Navbar.Brand>
+    <Navbar className="mainNav" variant="dark">
+        <Image src="./././favicon.ico"/>
+        <Navbar.Brand className="banner">REAL BANNER IMAGE NEEDED CURRENTLY FAKE IMAGE</Navbar.Brand>
         <Navbar.Collapse className="justify-content-end">
             <Nav >
                 <Link className="links" href="#home" to={ROUTES.HOME}>Home</Link>
