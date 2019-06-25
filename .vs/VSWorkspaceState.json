@@ -3,14 +3,14 @@
     "",
     "\\src",
     "\\src\\components",
-    "\\src\\components\\Account",
-    "\\src\\components\\Admin",
     "\\src\\components\\App",
     "\\src\\components\\Firebase",
-    "\\src\\components\\SignOut",
-    "\\src\\components\\SignUp",
-    "\\src\\constants"
+    "\\src\\components\\Navigation",
+    "\\src\\components\\PasswordChange",
+    "\\src\\components\\PasswordForget",
+    "\\src\\components\\SignIn",
+    "\\src\\images"
   ],
-  "SelectedNode": "\\src\\components\\App\\index.js",
+  "SelectedNode": "\\public\\index.html",
   "PreviewInSolutionExplorer": false
 }

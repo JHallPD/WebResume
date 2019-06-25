@@ -23,13 +23,17 @@ const Navigation = () => (
 //added background image to css
 const NavigationAuth = ({ authUser }) => (
     <Navbar className="mainNav" variant="dark">
-        <Image src="./././favicon.ico"/>
-        <Navbar.Brand className="banner">REAL BANNER IMAGE NEEDED CURRENTLY FAKE IMAGE</Navbar.Brand>
+        <Image src="./././favicon.ico" className="favicon"/>
+        <Navbar.Brand className="banner">Jeff Hall's Portfolio</Navbar.Brand>
         <Navbar.Collapse className="justify-content-end">
-            <Nav >
-                <Link className="links" href="#home" to={ROUTES.HOME}>Home</Link>
-                <Link className="links" href="#link" to={ROUTES.LANDING}>Landing</Link>
+            <Nav className="linksDiv">
                 <NavDropdown title={"Signed In as: "+authUser.username} id="basic-nav-dropdown">
+                    <NavDropdown.Item href="#Landing" >
+                        <Link className="links" href="#link" to={ROUTES.LANDING}>Landing</Link>
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#Home">
+                        <Link className="links" href="#home" to={ROUTES.HOME}>Home</Link>
+                    </NavDropdown.Item>
                     <NavDropdown.Item href="#Account">
                         <Link className="links" to={ROUTES.ACCOUNT}> Account </Link>
                     </NavDropdown.Item>
@@ -54,12 +58,11 @@ const NavigationNonAuth = () => (
         <Navbar.Brand className="banner">BANNER IMAGE NEEDED</Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
-            <Navbar.Text>
-                TEST TEXT
-            </Navbar.Text>
             <Nav className="linksDiv">
-                <Link className="links" to={ROUTES.LANDING}>Landing</Link>
                 <NavDropdown title={"Please Sign In"} alignRight id="basic-nav-dropdown">
+                    <NavDropdown.Item href="#Landing" >
+                        <Link className="links" href="#link" to={ROUTES.LANDING}>Landing</Link>
+                    </NavDropdown.Item>
                     <NavDropdown.Item href="#SignIn">
                         <Link to={ROUTES.SIGN_IN}>Sign In</Link>
                     </NavDropdown.Item>
