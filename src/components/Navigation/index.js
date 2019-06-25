@@ -29,18 +29,18 @@ const NavigationAuth = ({ authUser }) => (
             <Nav className="linksDiv">
                 <NavDropdown title={"Signed In as: "+authUser.username} id="basic-nav-dropdown">
                     <NavDropdown.Item href="#Landing" >
-                        <Link className="links" href="#link" to={ROUTES.LANDING}>Landing</Link>
+                        <Link className="links" href="#Landing" to={ROUTES.LANDING}>Landing</Link>
                     </NavDropdown.Item>
                     <NavDropdown.Item href="#Home">
-                        <Link className="links" href="#home" to={ROUTES.HOME}>Home</Link>
+                        <Link className="links" href="#Home" to={ROUTES.HOME}>Home</Link>
                     </NavDropdown.Item>
                     <NavDropdown.Item href="#Account">
-                        <Link className="links" to={ROUTES.ACCOUNT}> Account </Link>
+                        <Link className="links" href="#Account" to={ROUTES.ACCOUNT}> Account </Link>
                     </NavDropdown.Item>
                     {/** If the user is an Admin allow admin routing **/}
                     {authUser.roles.includes(ROLES.ADMIN) && (                   
                     <NavDropdown.Item href="#Admin">
-                            <Link  to={ROUTES.ADMIN}>Admin</Link>
+                            <Link className="links" href="#Admin" to={ROUTES.ADMIN}>Admin</Link>
                     </NavDropdown.Item>)}
                     <NavDropdown.Divider />
                         <SignOutButton />
@@ -61,14 +61,14 @@ const NavigationNonAuth = () => (
             <Nav className="linksDiv">
                 <NavDropdown title={"Please Sign In"} alignRight id="basic-nav-dropdown">
                     <NavDropdown.Item href="#Landing" >
-                        <Link className="links" href="#link" to={ROUTES.LANDING}>Landing</Link>
+                        <Link className="links" href="#Landing" to={ROUTES.LANDING}>Landing</Link>
                     </NavDropdown.Item>
                     <NavDropdown.Item href="#SignIn">
-                        <Link to={ROUTES.SIGN_IN}>Sign In</Link>
+                        <Link className="links" href="#SignIn" to={ROUTES.SIGN_IN}>Sign In</Link>
                     </NavDropdown.Item>
                     <NavDropdown.Divider />
                     <NavDropdown.Item href="#SignUp">
-                        <Link to={ROUTES.SIGN_UP}>Sign Up</Link>
+                        <Link className="links" href="#SignUp" to={ROUTES.SIGN_UP}>Sign Up</Link>
                     </NavDropdown.Item>
                 </NavDropdown>
             </Nav>
