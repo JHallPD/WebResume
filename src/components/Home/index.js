@@ -5,8 +5,7 @@ import {
     withAuthorization,
     withEmailVerification,
 } from '../Session';
-import { withFirebase } from '../Firebase';
-import { BubbleLoader } from 'react-css-loaders';
+import * as ROUTES from '../../constants/routes';
 import '../../index.css';
 import Button from 'react-bootstrap/Button';
 import { CardDeck,Card } from 'react-bootstrap';

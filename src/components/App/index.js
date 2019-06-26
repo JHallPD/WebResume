@@ -9,6 +9,7 @@ import HomePage from '../Home';
 import AccountPage from '../Account';
 import AdminPage from '../Admin';
 import Footer from '../Footer';
+import ContactPage from '../Contact';
 import * as ROUTES from '../../constants/routes';
 import { withAuthentication } from '../Session';
 import '../../index.css';
@@ -33,6 +34,7 @@ const App = () => (
             <Route path={ROUTES.HOME} component={HomePage} />
             <Route path={ROUTES.ACCOUNT} component={AccountPage} />
             <Route path={ROUTES.ADMIN} component={AdminPage} />
+            <Route path={ROUTES.CONTACT} component={ContactPage} />
             <Footer/>
         </div>
     </Router>
