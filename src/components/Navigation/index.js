@@ -54,8 +54,8 @@ const NavigationAuth = ({ authUser }) => (
 //simple navbar for nonAuthUsers
 //no access to home page, I will need to change this
 const NavigationNonAuth = () => (
-    <Navbar className="mainNav">
-        <Navbar.Brand className="banner">BANNER IMAGE NEEDED</Navbar.Brand>
+    <Navbar className="mainNav" variant="dark">
+        <Navbar.Brand className="banner">Jeff Hall's Portfolio</Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
             <Nav className="linksDiv">

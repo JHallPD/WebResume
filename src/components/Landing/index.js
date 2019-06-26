@@ -18,10 +18,10 @@ const Landing = () => (
 
                 <p className='hdTxt'>Front-end Programming<br /> Critical Thinking & Problem Solving<br />A never give up attitude</p>
 
-            <h6>Current Programming Languages</h6>
+                <h6 className='lndH6'>Current Programming Languages</h6>
                 <p className='hdTxt'>Reactjs, JavaScript, React-Native, Node.js, Python, SQL</p>
                 <div className='btnRow'>
-                    <a className="links" href={"https://github.com/JHallPD"}>
+                    <a className="links" href={"https://github.com/JHallPD/Resume"}>
                     <Button type="button" variant="outline-info">
                         Resume
                         </Button>
