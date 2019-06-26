@@ -102,7 +102,7 @@ btn-danger {
     margin-bottom: 0%;
     padding-left: 6px;
     list-style-type: none;
-    border-bottom: 2px solid rgba(255, 187, 0, 0.8);
+    border-bottom: 1px solid black;
     background-image: url('images/1102x250.svg');
     font-size-adjust: 0.50;
     z-index: 1
@@ -192,12 +192,37 @@ bubbleLoad {
 }
 
 /** Landing CSS **/
+.lndMain {
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px 0px 0px 0px;
+    display: flex;
+    height: 100vh;
+    background-image: url('images/new.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.lndHeader {
+    display: flex;
+    align-self: center;
+    text-align: center;
+    justify-content: center;
+    align-items:center;
+    margin: 0px 0px 5.5% 0px;
+    color: #fff;
+    height: 36%;
+    width: 36%;
+}
+.lndH6 {
+    text-decoration-line:underline;
+}
 /** Footer CSS **/
 .mainFooter {
     background-color: #373940;
     color: #ffffff;
     height: 100%;
     width: 100%;
+    overflow: hidden;
 }
 .row {
     justify-content: center;

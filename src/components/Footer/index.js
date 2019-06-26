@@ -13,8 +13,6 @@ export default class Footer extends Component {
                                     <Image src="./././Git-Mark.png"  />
                                 </a>
                             </li>
-                        
-                            
                         </ul>
                         <p>Created By Jeff Hall</p>
                     </div>
