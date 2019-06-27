@@ -18,11 +18,15 @@ import { CardDeck,Card } from 'react-bootstrap';
 //potential for chat bot
 const HomePage = () => (
     <div className="mDiv">
+        <div className="bgBtnDiv">
+            <Button variant="warning" className="bgBtn" onClick={changeBackground}>Try me!</Button>
+        </div>
         <div className="mTitle">
         <h1 >JEFF HALL NEEDS A JOB</h1>
             <p>THIS IS WHERE ALL THE RESUME INFORMATION WILL BE</p>
+            
         </div>
-        <div>
+        <div className="summaryBox">
             <h3>JEFF HALL</h3>
  
             <h4>(705)495-7298 | jeffahall94@gmail.com | 76 Pinnacle Drive, Kitchener, ON N2P 1C5</h4>
@@ -40,7 +44,8 @@ const HomePage = () => (
                                                             
             <h6>Programming Languages </h6>
             <p>Java, JavaScript, React-Native, Node.js, React,Python, C#, SQL, ASP.Net.</p>
-                                                                            
+        </div>
+        <div className="employmentBox">
             <h6>Employment History</h6>
                                                                                     
             <p>Product Prototyper Co-op                         September 2018-December 2018</p>
@@ -74,7 +79,8 @@ const HomePage = () => (
             <p>Ministry of Natural Resources                                        Sudbury, ON</p>
             <p>Working as a crew member for an MNR forest fire crew.</p>
             <p>Required to complete strenuous and dangerous crew tasks while containing than subduing forest fires.</p>
-
+        </div>
+        <div className="educationBox">
             <h6>Education </h6>
 
             <p>Computer Programming Diploma                                       2016-2018</p>
@@ -124,15 +130,52 @@ const HomePage = () => (
                 </Card.ImgOverlay>
             </Card>
         </CardDeck>
+        <div className="interestBox">
         <p>Interests </p>
         <p>•	Competitive Sports-Playing competitive basketball and volleyball is something I have enjoyed for most of my early life.</p>
         <p>•	Camping/Hiking-Growing up in Northern Ontario instilled a love for nature and discovery from a young age.</p>
         <p>•	Video Games- General love for video games especially the sim & management genres with the dream of starting my own development company.</p>
         <p>•	Personal Projects- Currently developing phone apps in my spare time, along with some blockchain research.</p>
         <br/>
-        <h2>References Available up Request</h2>
+            <h2>References Available up Request</h2>
+        </div>
     </div>
 );
+let i = 0;
+function changeBackground(e) {
+
+    let background = ['./././Flat-Mountains.svg', './././Dragon-Scales.svg', './././Cornered-Stairs.svg','./././Large-Triangles.svg']
+
+    if (i == 0) {
+        
+        document.querySelector('.mDiv').style.backgroundRepeat = 'no-repeat';
+        document.querySelector('.mDiv').style.backgroundAttachment = 'fixed';
+        document.querySelector('.mDiv').style.backgroundSize = 'cover';
+        document.querySelector('.mDiv').style.backgroundImage = 'url(' + background[i] + ')';
+        i++
+    } else if (i == 1) {
+        document.querySelector('.mDiv').style.backgroundImage = 'url(' + background[i] + ')';
+        document.querySelector('.mDiv').style.backgroundRepeat = 'repeat-x';
+        document.querySelector('.mDiv').style.backgroundAttachment = 'initial';
+        document.querySelector('.mDiv').style.backgroundSize = 'contain';
+        i++
+    } else if (i == 2) {
+        document.querySelector('.mDiv').style.backgroundImage = 'url(' + background[i] + ')';
+        document.querySelector('.mDiv').style.backgroundRepeat = 'no-repeat';
+        document.querySelector('.mDiv').style.backgroundAttachment = 'fixed';
+        document.querySelector('.mDiv').style.backgroundSize = 'cover';
+        i++
+    }
+    else if (i == 3) {
+        document.querySelector('.mDiv').style.backgroundImage = 'url(' + background[i] + ')';
+        document.querySelector('.mDiv').style.backgroundRepeat = 'initial';
+        document.querySelector('.mDiv').style.backgroundAttachment = 'unset';
+        document.querySelector('.mDiv').style.backgroundSize = 'initial';
+        i = 0;
+    }
+    console.log(document.querySelector('.mDiv').style);
+}
+
 const condition = authUser => !!authUser;
 
 export default compose(withEmailVerification,withAuthorization(condition),)(HomePage);

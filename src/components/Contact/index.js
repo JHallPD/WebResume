@@ -75,7 +75,7 @@ class contactPageBase extends Component {
                         <div className="cInfo">
                             <h1>Contact Jeff Hall</h1>
                             <p className="pForm"><i class="fa fa-phone"></i> : 705-495-7298</p>
-                            <p className="pForm"><i class="fa fa-envelope"></i> : hirejeffhall@gmail.com</p>
+                            <p className="pFormEmail"><i class="fa fa-envelope"></i> : hirejeffhall@gmail.com</p>
                         </div>
                     </div>
 

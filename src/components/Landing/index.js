@@ -28,12 +28,12 @@ const Landing = () => (
                     </a>
                     {!firebase.auth().currentUser && (
                     <Link className="links" href="#SignUp" to={ROUTES.SIGN_IN}>
-                    <Button type="button" variant="outline-success" onClick={ROUTES.SIGN_IN}>
+                    <Button type="button" variant="outline-success" >
                         Sign In
                         </Button>
                     </Link>)}
                     <Link className="links" href="#SignUp" to={ROUTES.CONTACT}>
-                    <Button type="button" variant="outline-success"onClick={ROUTES.CONTACT}>
+                    <Button type="button" variant="outline-success">
                         Contact
                         </Button>
                     </Link>

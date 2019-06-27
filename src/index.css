@@ -67,16 +67,7 @@ Button {
 .signInBtn {
     padding: 0px;
 }
-.btn-primary {
-    color: #fff;
-    background-color: #00e0ff;
-    border-color: #00daf8;
-}
-    .btn-primary:hover {
-        color: #fff;
-        background-color: #00bdd7;
-        border-color: #00b7d0;
-    }
+
 btn-danger {
     color: #fff;
     padding: -2px -6px -2px -6px;
@@ -102,7 +93,6 @@ btn-danger {
     margin-bottom: 0%;
     padding-left: 6px;
     list-style-type: none;
-    border-bottom: 1px solid black;
     background-color: #373940;
     font-size-adjust: 0.50;
     z-index: 1
@@ -168,17 +158,31 @@ bubbleLoad {
     color: blue;
 }
 .mDiv {
-    background-color: #0d8200;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0em 0em 0em 0em;
+    padding: 12em 5% 8em 5%;
+    background-color: rgba(255, 255, 255, 0.80);
     color: #ffffff;
-    height: 100%;
-    padding: 60px 0px 0px 0px
-}
-.mTitle {
-    text-align:center;
-    align-content:center;
-    align-items:center;
-    justify-content:center;
+    background-image: url('images/Large-Triangles.svg');
 
+}
+.bgBtnDiv {
+    position:fixed;
+    top: 80px;
+    left: 10px;
+    margin: 0em 0em 0em 0em;
+    padding: 0em 0em 0em 0em;
+}
+.bgBtn {
+    margin: 0em 0em 0em 0em;
+    padding:0em 2px 0em 2px;
+    height: 22px;
+    width: 48px;
+    font-size: 12px;
 }
 .hmMsgList {
     margin-top: 2px;
@@ -190,34 +194,92 @@ bubbleLoad {
     padding: 0px;
     margin: 10px;
 }
+.mTitle {
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    margin: 0em auto 4em auto;
+    width: 100%;
+    background-color: #373940;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px 0 rgba(45,45,45,0.7);
+}
+.interestBox {
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    margin: 4em auto 0em auto;
+    width: 100%;
+    background-color: #373940;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px 0 rgba(45,45,45,0.7);
+}
+.educationBox {
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    margin: 0em auto 4em auto;
+    width: 100%;
+    background-color: #373940;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px 0 rgba(45,45,45,0.7);
+}
+.employmentBox{
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    margin: 0em auto 4em auto;
+    width: 100%;
+    background-color: #373940;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px 0 rgba(45,45,45,0.7);
+}
+.summaryBox {
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    margin: 0em auto 4em auto;
+    width: 100%;
+    background-color: #373940;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px 0 rgba(45,45,45,0.7);
+}
 
 /** Landing CSS **/
 .lndMain {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
     box-sizing: border-box;
-    margin: 0px 0px 0px 0px;
-    padding: 1em;
-    padding-top: 10em;
-    background-color: #92bde7;
-    height:100vh;
+    margin: 0em 0em 0em 0em;
+    padding: 10em 5% 14em 5%;
     line-height: 1.6;
-    background-image: url('images/deskcomp.jpg');
+    background-color: #92bde7;
+    background-image: url('images/old.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 .lndHeader {
-    justify-content:center;
-    align-content:center;
-    align-items:center;
-    align-self:center;
-    text-align:center;
-    width:46%;
-    margin-left:auto;
-    margin-right:auto;
-    padding:1em 1em 2em 1em;
-    border:2px solid black;
-    background-color: rgba(68,68,68,0.8);
+    margin: 0em auto 8em auto;
+    width: 100%;
+    background-color: #373940;
     border-radius: 1rem;
-    color:#fff;
+    box-shadow: 0 0 20px 0 rgba(45,45,45,0.7);
+
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+    width: 80%;
+    padding: 1em 1em 2em 1em;
+    color: #fff;
 }
 .hdTxt {
    margin: 0px 0px 1px 0px;
@@ -263,15 +325,18 @@ bubbleLoad {
 /** ContactPage CSS **/
 
 .contactMain {
-    position:relative;
+    position: relative;
     top: 0;
     left: 0;
-    width:100%;
+    width: 100%;
     box-sizing: border-box;
     margin: 0em 0em 0em 0em;
     padding: 10em 5% 14em 5%;
     line-height: 1.6;
     background-color: #92bde7;
+    background-image: url('images/old.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 .formContainer {
     margin: 0em auto 0em auto;
@@ -296,8 +361,13 @@ bubbleLoad {
 
 }
 .pForm {
-    margin:0em 0em 0em 0em;
+    margin: 0em 0em 0em 0em;
+    font-size: 14px;
 }
+.pFormEmail {
+    font-size: 11px;
+}
+
 .contactForm form {
     margin: 0em 0em 0em 0em;
     
@@ -360,7 +430,12 @@ bubbleLoad {
 }
 
 
+/** Screen Size Related CSS **/
+
 @media(min-width:700px){
+    .lndHeader {
+        width: 80%;
+    }
     .contactMain {
         margin: 0em 0em 0em 0em;
         padding: 10em 13% 17em 13%;
@@ -393,14 +468,43 @@ bubbleLoad {
     }
 }
 @media(min-width:900px) {
+    .lndHeader {
+        width: 632px;
+    }
     .contactMain {
         margin: 0em 0em 0em 0em;
         padding: 10em 18% 17em 18%;
     }
+    .pForm {
+        margin: 0em 0em 0em 0em;
+        font-size: 16px;
+    }
+
+    .pFormEmail {
+        font-size: 13px;
+    }
+}
+@media(min-width:1200px) {
+    .formContainer {
+        width: 758px;
+    }
+    .pForm {
+        margin: 0em 0em 0em 0em;
+        font-size: 16px;
+    }
+
+    .pFormEmail {
+        font-size: 16px;
+    }
+}
+@media(min-width:1600px) {
+    .formContainer {
+        width: 1014px;
+    }
 }
 @media(min-width:1800px) {
-    .contactMain {
-        margin: 0em 0em 0em 0em;
-        padding: 10em 25% 17em 25%;
-    }
+        .contactMain {
+            margin: 0em 0em 0em 0em;
+            padding: 10em 25% 17em 25%;
+        }
 }
