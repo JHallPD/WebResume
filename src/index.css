@@ -193,35 +193,41 @@ bubbleLoad {
 
 /** Landing CSS **/
 .lndMain {
-    justify-content: center;
-    padding: 0px 0px 0px 0px;
-    display: flex;
-    height: 100vh;
-    background-image: url('images/new.jpg');
+    box-sizing: border-box;
+    margin: 0px 0px 0px 0px;
+    padding: 1em;
+    padding-top: 10em;
+    background-color: #92bde7;
+    height:100vh;
+    line-height: 1.6;
+    background-image: url('images/deskcomp.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 .lndHeader {
-    display: flex;
-    align-self: center;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    margin: 0px 8px 5% 0px;
-    color: #fff;
-    height: 34%;
-    width: 35%;
+    justify-content:center;
+    align-content:center;
+    align-items:center;
+    align-self:center;
+    text-align:center;
+    width:46%;
+    margin-left:auto;
+    margin-right:auto;
+    padding:1em 1em 2em 1em;
+    border:2px solid black;
     background-color: rgba(68,68,68,0.8);
     border-radius: 1rem;
+    color:#fff;
 }
 .hdTxt {
-   margin: 0px 0px 0px 0px;
+   margin: 0px 0px 1px 0px;
 }
 .lndH6 {
-    text-decoration-line:underline;
+    text-decoration-line: underline;
+    margin: 1em 1em 1em 1em;
 }
 .btnRow {
-    margin: 0px 15% 0px 15%;
+    margin: 1em 1em 0em 1em;
     display:flex;
     flex-direction:row;
     justify-content:space-between;
@@ -252,4 +258,149 @@ bubbleLoad {
     padding: 12px 0px 4px 0px;
     height: 100%;
     width: 100%;
+}
+
+/** ContactPage CSS **/
+
+.contactMain {
+    position:relative;
+    top: 0;
+    left: 0;
+    width:100%;
+    box-sizing: border-box;
+    margin: 0em 0em 0em 0em;
+    padding: 10em 5% 14em 5%;
+    line-height: 1.6;
+    background-color: #92bde7;
+}
+.formContainer {
+    margin: 0em auto 0em auto;
+    width: 100%;
+    background-color: #373940;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px 0 rgba(45,45,45,0.7);
+}
+    .formContainer > * {
+        color: #fff;
+        padding: 1em;
+    }
+.contactInfo {
+    border-top-left-radius:1rem;
+    border-top-right-radius:1rem;
+    margin: 0em 0em 0em 0em;
+    text-align: center;
+    background-color: #373940;
+    border-bottom: 2px solid #202124;
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+
+}
+.pForm {
+    margin:0em 0em 0em 0em;
+}
+.contactForm form {
+    margin: 0em 0em 0em 0em;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px
+}
+.contactForm form label{
+    display:block;
+}
+.contactForm form p{
+    margin: 0em;
+}
+    .contactForm h3 {
+        text-align:center;
+    }
+.full{
+    grid-column: 1 / 3;
+}
+.fullBtn {
+    grid-column: 1 / 3;
+    display: flex;
+    justify-content: center;
+}
+.submitBtnContact {
+    width: 100%;
+    text-transform: uppercase;
+    border: 2px solid rgba(80,80,80,0.7);
+}
+.emailInput {
+    border: 2px solid rgba(80,80,80,0.7);
+    border-radius: 1rem;
+    width: 100%;
+}
+.emailInputMsg {
+        border: 2px solid rgba(80,80,80,0.7);
+        border-radius: 1rem;
+        width:100%;
+}
+.contactImage {
+    content: url(./images/JHall.png);
+    border: 2px solid rgba(130,130,130,1);
+    margin: 1em 0em 0em 0em;
+    height: 60%;
+    width: 80%;
+}
+.cInfo {
+    padding: 2em 0em 0em 0em;
+}
+.alert {
+    position: static;
+    text-align: center;
+    justify-content: center;
+    display: none;
+    padding: 10px 10px 10px 10px;
+    background-color: #79c879;
+    color: #fff;
+    margin: -5em 0em 2.08em 0em;
+    width: 100%;
+}
+
+
+@media(min-width:700px){
+    .contactMain {
+        margin: 0em 0em 0em 0em;
+        padding: 10em 13% 17em 13%;
+    }
+    .formContainer {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+    .contactInfo {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        border-bottom-left-radius: 1rem;
+        border-right: 2px solid #202124;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 0rem;
+        margin: 0em 0em 0em 0em;
+        text-align: center;
+        background-color: #373940;
+        border-bottom: 0px hidden #202124;
+    }
+    .contactImage {
+        align-self: center;
+        height: 50%;
+        width: 40%;
+    }
+    .cInfo {
+        padding: 0em 0em 0em 0em;
+        margin: 0em 0em 2em 0em;
+    }
+}
+@media(min-width:900px) {
+    .contactMain {
+        margin: 0em 0em 0em 0em;
+        padding: 10em 18% 17em 18%;
+    }
+}
+@media(min-width:1800px) {
+    .contactMain {
+        margin: 0em 0em 0em 0em;
+        padding: 10em 25% 17em 25%;
+    }
 }

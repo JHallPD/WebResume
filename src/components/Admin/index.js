@@ -12,12 +12,14 @@ import '../../index.css';
 const AdminPage = () => (
     <div>
         <h1>Admin</h1>
-        <p>The Admin Page is accessible by every signed in admin user.</p>
+        <p>Unless you are Jeff Hall you should not be seeing this</p>
 
         <Switch>
             <Route exact path={ROUTES.ADMIN_DETAILS} component={UserItem} />
             <Route exact path={ROUTES.ADMIN} component={UserList} />
+            
         </Switch>
+        <Messages />
     </div>
 );
 
@@ -160,6 +162,74 @@ class UserItemBase extends Component {
     }
 }
 
+class MessagesBase extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            loading: false,
+            messages: [],
+        };
+    }
+
+    componentDidMount() {
+        this.setState({ loading: true });
+
+        this.props.firebase.messages().on('value', snapshot => {
+            const messageObject = snapshot.val();
+
+            if (messageObject) {
+                const messageList = Object.keys(messageObject).map(key => ({
+                    ...messageObject[key],
+                    uid: key,
+                }));
+
+                this.setState({
+                    messages: messageList,
+                    loading: false
+                });
+            } else {
+                this.setState({ messages: null, loading: false });
+            }
+        });
+    }
+
+    componentWillUnmount() {
+        this.props.firebase.messages().off();
+    }
+
+    render() {
+        const { messages, loading } = this.state;
+
+        return (
+            <div>
+                <h2>Messages</h2>
+                {loading && <BubbleLoader size="20" className="bubbleLoad" />}
+
+                {messages ? (
+                    <MessageList messages={messages} />
+                ) : (
+                        <div>There are no messages ...</div>
+                    )}
+            </div>
+        );
+    }
+}
+const MessageList = ({ messages }) => (
+    <ul>
+        {messages.map(message => (
+            <MessageItem key={message.uid} message={message} />
+        ))}
+    </ul>
+);
+
+const MessageItem = ({ message }) => (
+    <li>
+        <strong>{message.name}:{message.company}</strong> :{message.email}/{message.phone} : {message.message}
+    </li>
+);
+
+const Messages = withFirebase(MessagesBase);
 const UserList = withFirebase(UserListBase);
 const UserItem = withFirebase(UserItemBase);
 
