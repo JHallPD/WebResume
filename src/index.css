@@ -267,7 +267,7 @@ bubbleLoad {
     width: 100%;
     box-sizing: border-box;
     margin: 0em 0em 0em 0em;
-    padding: 10em 5% 14em 5%;
+    padding: 10em 5% 12% 5%;
     line-height: 1.6;
     background-color: #92bde7;
     background-image: url('images/old.jpg');
@@ -340,7 +340,7 @@ bubbleLoad {
     width: 100%;
     box-sizing: border-box;
     margin: 0em 0em 0em 0em;
-    padding: 10em 5% 14em 5%;
+    padding: 10em 5% 14% 5%;
     line-height: 1.6;
     background-color: #92bde7;
     background-image: url('images/old.jpg');
@@ -348,7 +348,7 @@ bubbleLoad {
     background-size: 100% 100%;
 }
 .formContainer {
-    margin: 0em auto 0em auto;
+    margin: 0em auto 2em auto;
     width: 100%;
     background-color: #373940;
     border-radius: 1rem;

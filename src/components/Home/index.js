@@ -148,7 +148,7 @@ const HomePage = () => (
 let i = 0;
 function changeBackground(e) {
 
-    let background = ['./././Flat-Mountains.svg', './././Dragon-Scales.svg', './././Cornered-Stairs.svg','./././Large-Triangles.svg']
+    let background = ['./././Flat-Mountains.svg', './././Dragon-Scales.svg', './././Cornered-Stairs.svg', './././Vanishing-Stripes.svg', './././Hollowed-Boxes.svg','./././Large-Triangles.svg']
 
     if (i == 0) {
         
@@ -169,8 +169,21 @@ function changeBackground(e) {
         document.querySelector('.mDiv').style.backgroundAttachment = 'fixed';
         document.querySelector('.mDiv').style.backgroundSize = 'cover';
         i++
+    } else if (i == 3) {
+        document.querySelector('.mDiv').style.backgroundImage = 'url(' + background[i] + ')';
+        document.querySelector('.mDiv').style.backgroundRepeat = 'initial';
+        document.querySelector('.mDiv').style.backgroundAttachment = 'unset';
+        document.querySelector('.mDiv').style.backgroundSize = 'initial';
+        i++
     }
-    else if (i == 3) {
+    else if (i == 4) {
+        document.querySelector('.mDiv').style.backgroundImage = 'url(' + background[i] + ')';
+        document.querySelector('.mDiv').style.backgroundRepeat = 'initial';
+        document.querySelector('.mDiv').style.backgroundAttachment = 'unset';
+        document.querySelector('.mDiv').style.backgroundSize = 'initial';
+        i++
+    }
+    else if (i == 5) {
         document.querySelector('.mDiv').style.backgroundImage = 'url(' + background[i] + ')';
         document.querySelector('.mDiv').style.backgroundRepeat = 'initial';
         document.querySelector('.mDiv').style.backgroundAttachment = 'unset';
