@@ -5,6 +5,7 @@ import {
     withAuthorization,
     withEmailVerification,
 } from '../Session';
+import { Link } from 'react-router-dom';
 import * as ROUTES from '../../constants/routes';
 import '../../index.css';
 import Button from 'react-bootstrap/Button';
@@ -18,8 +19,11 @@ import { CardDeck,Card } from 'react-bootstrap';
 //potential for chat bot
 const HomePage = () => (
     <div className="mDiv">
-        <div className="bgBtnDiv">
-            <Button variant="warning" className="bgBtn" onClick={changeBackground}>Try me!</Button>
+        <div className="BtnsDiv">
+            <Button variant="warning" className="bgBtn" onClick={changeBackground}><i class="fas fa-magic fa-2x"></i></Button>
+            <Link className="links" href="#SignUp" to={ROUTES.CONTACT}>
+                <Button variant="outline-light" className="contactBtn" onClick={changeBackground}><i class="fa fa-envelope fa-2x"></i></Button>
+            </Link>
         </div>
         <div className="mTitle">
         <h1 >JEFF HALL NEEDS A JOB</h1>
