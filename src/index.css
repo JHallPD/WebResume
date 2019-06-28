@@ -32,13 +32,14 @@ Button {
 }
 .dropdown-menu {
     padding: 0px;
+    margin: -0.4em 0em 0em 0em;
     border-radius: .36rem;
     background-color: #373940;
 }
 .dropdown-divider {
     padding: 0px;
     margin: 0px 0px -3px 0px;
-    border-top: 5px solid rgba(255, 187, 0, 0.8);
+    border-top: 5px solid rgba(255, 255, 255, 0.3);
 }
 .signOutBtn {
     height: 100%;
@@ -127,7 +128,7 @@ btn-danger {
     
 }
 .dropdown-item.active {
-        background-color: rgba(255, 187, 0, 0.8);
+        background-color: rgba(255, 255, 255, 1);
     }
 .userNav {
     height: 100%;
@@ -153,9 +154,31 @@ li {
     padding:0px;
 }
 
+
 /** Home **/
 bubbleLoad {
     color: blue;
+}
+.bgBtn {
+    position: fixed;
+    top: 7%;
+    left: 8px;
+    margin: 0em 0em 0em 0em;
+    padding: 0px 0px 0px 0px;
+    height: 22px;
+    width: 26px;
+    font-size: 15px;
+}
+
+.contactBtn {
+    position: fixed;
+    top: 7%;
+    right: 8px;
+    margin: 0em 0em 0em 0em;
+    padding: 0px 0px 0px 0px;
+    height: 22px;
+    width: 26px;
+    font-size: 15px;
 }
 .mDiv {
     position: relative;
@@ -163,35 +186,16 @@ bubbleLoad {
     left: 0;
     width: 100%;
     box-sizing: border-box;
+    padding: 0em 2.5em 2em 2.5em;
     margin: 0em 0em 0em 0em;
-    padding: 12em 5% 8em 5%;
     background-color: rgba(255, 255, 255, 0.80);
     color: #ffffff;
     background-image: url('images/Large-Triangles.svg');
-
 }
 .BtnsDiv {
 
     margin: 0em 0em 0em 0em;
     padding: 0em 0em 0em 0em;
-}
-.bgBtn {
-    position: fixed;
-    top: 80px;
-    left: 10px;
-    margin: 0em 0em 0em 0em;
-    padding: 0px 0px 0px 0px;
-    height: 40px;
-    width: 40px;
-}
-.contactBtn {
-    position: fixed;
-    top: 80px;
-    right: 10px;
-    margin: 0em 0em 0em 0em;
-    padding: 0px 0px 0px 0px;
-    height: 32px;
-    width: 40px;
 }
 .hmMsgList {
     margin-top: 2px;
@@ -201,58 +205,216 @@ bubbleLoad {
 }
 .hmDeck {
     padding: 0px;
-    margin: 10px;
+    margin: 0px;
+}
+.card {
+    background-color: #373940;
+}
+.cardFull {
+    background-color: #373940;
+    padding: 0em 0em 0em 0em;
+
+}
+.linkNoLine:hover {
+    text-decoration-color: #fff;
+}
+.linkNoLineFull:hover {
+    text-decoration-color: #fff;
 }
 .mTitle {
     text-align: center;
     align-content: center;
     align-items: center;
     justify-content: center;
-    margin: 0em auto 4em auto;
+    padding: 1em 0em 0.5em 0em;
+    margin: 5em 0em 2em 0em;
     width: 100%;
     background-color: #373940;
     border-radius: 1rem;
     box-shadow: 0 0 20px 0 rgba(45,45,45,0.7);
 }
+    .mTitle h1 {
+        font-size: 18px;
+    }
+    .mTitle h4 {
+        font-size: 14px;
+        padding: 0em 3em 0em 3em;
+    }
+.summaryBox {
+    padding: 0.5em 0em 0.5em 0em;
+    margin: 0em 0em 2em 0em;
+}
+
+    .summaryBox h3 {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+.sumBoxLang {
+    font-size: 12px;
+}
+
+    .sumBoxLang h6 {
+        font-size: 16px;
+        text-decoration-line: underline;
+    }
+
+.sumBoxObj {
+    font-size: 12px;
+    margin: 0em 2em 0em 2em;
+}
+
+    .sumBoxObj h5 {
+        font-size: 16px;
+        text-decoration-line: underline;
+    }
+
+.sumBoxSkills {
+    font-size: 12px;
+    margin: 0em 2em 0em 2em;
+}
+
+    .sumBoxSkills h5 {
+        font-size: 16px;
+        text-decoration-line: underline;
+    }
 .interestBox {
     text-align: center;
     align-content: center;
     align-items: center;
     justify-content: center;
-    margin: 4em auto 0em auto;
+    margin: 1em 0em 0em 0em;
     width: 100%;
     background-color: #373940;
     border-radius: 1rem;
     box-shadow: 0 0 20px 0 rgba(45,45,45,0.7);
 }
+    .interestBox h5 {
+        padding: 0.5em 0em 0em 0em;
+        text-decoration-line: underline;
+    }
+    .interestBox h2 {
+        padding: 0em 0em 0.5em 0em;
+    }
+    .interestBox p {
+        font-size: 13px;
+        margin: 0.5em 2em 0em 2em;
+    }
 .educationBox {
     text-align: center;
     align-content: center;
     align-items: center;
     justify-content: center;
-    margin: 0em auto 4em auto;
+    margin: 0em auto 2em auto;
+    width: 100%;
+    background-color: #373940;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px 0 rgba(45,45,45,0.7);
+
+}
+    .educationBox h6 {
+        padding: 0.3em 0em 0em 0em;
+        margin: 0em;
+        font-size: 16px;
+        text-decoration-line: underline;
+    }
+    .educationGrid {
+        display: grid;
+        grid-template-columns: 1fr;
+        font-size: 12px;
+        margin: 0em;
+        padding: 0em;
+        line-height: 1px;
+    }
+.firstDiploma {
+    margin: 0.5em 0.5em 0em 0.5em;
+    padding: 1em 0em 0em 0em;
+    background-color: #4b4b4b;
+    border-radius: 0.5rem;
+}
+.secondDiploma {
+    margin: 0.5em 0.5em 0.5em 0.5em;
+    padding: 1em 0em 0em 0em;
+    background-color: #4b4b4b;
+    border-radius: 0.5rem;
+}
+.employmentBox {
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    margin: 0em auto 2em auto;
     width: 100%;
     background-color: #373940;
     border-radius: 1rem;
     box-shadow: 0 0 20px 0 rgba(45,45,45,0.7);
 }
-.employmentBox{
-    text-align: center;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-    margin: 0em auto 4em auto;
-    width: 100%;
-    background-color: #373940;
-    border-radius: 1rem;
-    box-shadow: 0 0 20px 0 rgba(45,45,45,0.7);
+.employmentBox h6 {
+    padding: 0.3em 0em 0em 0em;
+    margin: 0em;
+    font-size: 16px;
+    text-decoration-line: underline;
+}
+.employmentGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    font-size: 12px;
+    margin: 0em;
+    padding: 0em;
+    line-height: 1px;
+}
+.firstJob {
+    margin: 0.5em 0.5em 0em 0.5em;
+    padding: 1em 0em 1em 0em;
+    background-color: #4b4b4b;
+    border-radius: 0.5rem;
+
+}
+.Collapsible {
+    width:100%;
+}
+.jobGrid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+.workTitle {
+
+}
+.dateSpan {
+    font-size:10px;
+}
+.companyLoc {
+    font-size:10px;
+}
+.jobInfo {
+    line-height: 14px;
+    font-size: 14px;
+    padding: 0em 0.5em 0em 0.5em;
+}
+.secondJob {
+    margin: 0.5em 0.5em 0em 0.5em;
+    padding: 1em 0em 1em 0em;
+    background-color: #4b4b4b;
+    border-radius: 0.5rem;
+}
+.thirdJob {
+    margin: 0.5em 0.5em 0em 0.5em;
+    padding: 1em 0em 1em 0em;
+    background-color: #4b4b4b;
+    border-radius: 0.5rem;
+}
+.fourthJob {
+    margin: 0.5em 0.5em 0.5em 0.5em;
+    padding: 1em 0em 1em 0em;
+    background-color: #4b4b4b;
+    border-radius: 0.5rem;
 }
 .summaryBox {
     text-align: center;
     align-content: center;
     align-items: center;
     justify-content: center;
-    margin: 0em auto 4em auto;
+    margin: 0em auto 2em auto;
     width: 100%;
     background-color: #373940;
     border-radius: 1rem;
@@ -445,6 +607,28 @@ bubbleLoad {
     .lndHeader {
         width: 80%;
     }
+    .hmDeck {
+        flex-direction:row;
+    }
+    .linkNoLine {
+        height: 50%;
+        width: 50%;
+    }
+    .linkNoLineFull {
+        height: 50%;
+        width: 50%;
+        }
+
+
+    .cardFull {
+        background-color: #373940;
+        padding: 0em 0em 0em 0em;
+        margin: 2em 0em 0em 0em;
+        
+        
+    }
+    .cardImg1 {
+    }
     .contactMain {
         margin: 0em 0em 0em 0em;
         padding: 10em 13% 17em 13%;
@@ -475,7 +659,10 @@ bubbleLoad {
         padding: 0em 0em 0em 0em;
         margin: 0em 0em 2em 0em;
     }
+
+
 }
+
 @media(min-width:900px) {
     .lndHeader {
         width: 632px;

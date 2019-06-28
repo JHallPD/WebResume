@@ -24,10 +24,10 @@ const Navigation = () => (
 const NavigationAuth = ({ authUser }) => (
     <Navbar className="mainNav" variant="dark">
         <Image src="./././favicon.ico" className="favicon"/>
-        <Navbar.Brand className="banner">Jeff Hall's Portfolio</Navbar.Brand>
+        <Navbar.Brand className="banner">Jeff's Portfolio</Navbar.Brand>
         <Navbar.Collapse className="justify-content-end">
             <Nav className="linksDiv">
-                <NavDropdown title={"Signed In as: "+authUser.username} id="basic-nav-dropdown">
+                <NavDropdown title={"Signed In as: " + authUser.username} id="basic-nav-dropdown">
                     <NavDropdown.Item href="#Landing" >
                         <Link className="links" href="#Landing" to={ROUTES.LANDING}>Landing</Link>
                     </NavDropdown.Item>
@@ -55,7 +55,7 @@ const NavigationAuth = ({ authUser }) => (
 //no access to home page, I will need to change this
 const NavigationNonAuth = () => (
     <Navbar className="mainNav" variant="dark">
-        <Navbar.Brand className="banner">Jeff Hall's Portfolio</Navbar.Brand>
+        <Navbar.Brand className="banner">Jeff's Portfolio</Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
             <Nav className="linksDiv">
