@@ -29,6 +29,7 @@ const HomePage = () => (
             <h4>jeffahall94@gmail.com | 76 Pinnacle Drive, Kitchener, ON N2P 1C5</h4>
             
         </div>
+        <div className="wideSumEmp">
         <div className="summaryBox">
 
             <div className="sumBoxObj">
@@ -53,7 +54,7 @@ const HomePage = () => (
             <div className="employmentGrid">
                 <div className="firstJob">
                     <div className="jobGrid">
-                        <p className="workTitle">Product Prototyper</p><p>Co-op</p>
+                        <p className="workTitle">Product Prototyper</p><p className="role">Co-op</p>
                         <p className="companyLoc">CarFax Canada Kitchener, ON</p>
                         <p className="dateSpan"> Sept-Dec 2018</p>
                     </div>
@@ -73,7 +74,7 @@ const HomePage = () => (
 
                 <div className="secondJob">
                     <div className="jobGrid">
-                        <p className="workTitle">Research & Dev Engineer</p><p>Co-op</p>
+                        <p className="workTitle">Research & Dev Engineer</p><p className="role">Co-op</p>
                         <p className="companyLoc">Aerolytics Barrie, ON</p>
                         <p className="dateSpan"> Jan-April 2018</p>
                     </div>
@@ -90,7 +91,7 @@ const HomePage = () => (
                 </div>
                 <div className="thirdJob">
                     <div className="jobGrid">
-                        <p className="workTitle">Materials Engineer</p><p>Co-op</p>
+                        <p className="workTitle">Materials Engineer</p><p className="role">Co-op</p>
                         <p className="companyLoc">Dortec MAGNA Bradford, ON</p>
                         <p className="dateSpan"> Jan-Apr 2017</p>
                     </div>
@@ -108,7 +109,7 @@ const HomePage = () => (
                 </div>
                 <div className="fourthJob">
                     <div className="jobGrid">
-                        <p className="workTitle">Fire Ranger</p><p>Seasonal</p>
+                        <p className="workTitle">Fire Ranger</p><p className="role">Seasonal</p>
                         <p className="companyLoc">MNR Sudbury, ON</p>
                         <p className="dateSpan"> Jul-Apr 2016</p>
                     </div>
@@ -121,6 +122,7 @@ const HomePage = () => (
                         </div>
                     </Collapsible>
                 </div>
+            </div>
             </div>
         </div>
         <div className="educationBox">

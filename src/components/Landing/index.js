@@ -18,25 +18,35 @@ const Landing = () => (
 
                 <p className='hdTxt'>Front-end Programming<br /> Critical Thinking & Problem Solving<br />A never give up attitude</p>
 
-                <h6 className='lndH6'>Current Programming Languages</h6>
-                <p className='hdTxt'>Reactjs, JavaScript, React-Native, Node.js, Python, SQL</p>
-                <div className='btnRow'>
-                    <a className="links" href={"https://github.com/JHallPD/Resume"}>
-                    <Button type="button" variant="outline-info">
-                        Resume
-                        </Button>
-                    </a>
+                <h6 className='lndH6'>Current Site Functionality</h6>
+                <p className='hdTxt'>You must log in to use the contact form or home page.</p>
+                <p className='hdTxt'>In a rush? Click Resume + Supporting Docs</p>
+
+                    <div className="signInContactRow">
                     {!firebase.auth().currentUser && (
-                    <Link className="links" href="#SignUp" to={ROUTES.SIGN_IN}>
-                    <Button type="button" variant="outline-success" >
+                    <Link className="links" href="#SignIn" to={ROUTES.SIGN_IN}>
+                            <Button className="lndSignIn" type="button" variant="outline-success" >
                         Sign In
                         </Button>
-                    </Link>)}
-                    <Link className="links" href="#SignUp" to={ROUTES.CONTACT}>
-                    <Button type="button" variant="outline-success">
+                        </Link>)}
+                    {firebase.auth().currentUser && (
+                    <Link className="links" href="#Contact" to={ROUTES.CONTACT}>
+                        <Button className="lndContact" type="button" variant="outline-success">
                         Contact
                         </Button>
-                    </Link>
+                            </Link>)}
+                        </div>
+                <div className='btnRow'>
+                    <a className="links" href={"https://github.com/JHallPD/Resume/blob/master/ResumeJHall.docx?raw=true"} >
+                        <Button className="resumeBtn" type="button" variant="outline-info">
+                            Resume
+                        </Button>
+                    </a>
+                    <a className="links" href={"https://github.com/JHallPD/Resume/raw/master/Jeff%20Hall%20-%20EmployerEvaluation%202018.pdf"} >
+                        <Button className="resumeDocsBtn" type="button" variant="outline-info">
+                            +Docs
+                        </Button>
+                    </a>
                 </div>
             </div>
         </header>

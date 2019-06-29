@@ -6,17 +6,21 @@ import { PasswordForgetLink } from '../PasswordForget';
 import { withFirebase } from '../Firebase';
 import * as ROUTES from '../../constants/routes';
 import { isNewExpression } from '@babel/types';
-
+import { Button } from 'react-bootstrap';
+import { FacebookLoginButton, GoogleLoginButton, TwitterLoginButton } from "react-social-login-buttons";
 const SignInPage = () => (
-    <div>
+    <div className="mSignIn">
+        <div className="signInBox">
         <h1>SignIn</h1>
         <SignInForm />
-        <SignInGoogle />
-        <SignInFacebook />
-        <SignInTwitter />
+        <div className="socialLogIns">
+            <SignInGoogle />
+            <SignInFacebook />
+            <SignInTwitter />
+        </div>
         <PasswordForgetLink />
-        <SignUpLink />
-
+            <SignUpLink />
+        </div>
     </div>
 );
 const ERROR_CODE_ACCOUNT_EXISTS =
@@ -72,7 +76,8 @@ class SignInFormBase extends Component {
         const isInvalid = password === '' || email === '';
 
         return (
-            <form onSubmit={this.onSubmit}>
+            <form onSubmit={this.onSubmit} className="basicSignIn">
+                <div className="inputBasic">
                 <input
                     name="email"
                     value={email}
@@ -86,10 +91,11 @@ class SignInFormBase extends Component {
                     onChange={this.onChange}
                     type="password"
                     placeholder="Password"
-                />
-                <button disabled={isInvalid} type="submit">
+                    />
+                </div>
+                <Button variant="outline-success" disabled={isInvalid} type="submit">
                     Sign In
-        </button>
+        </Button>
 
                 {error && <p>{error.message}</p>}
             </form>
@@ -139,15 +145,15 @@ class SignInGoogleBase extends Component {
                 this.setState({ error });
             });
 
-        event.preventDefault();
+        
     };
 
     render() {
         const { error } = this.state;
 
         return (
-            <form onSubmit={this.onSubmit}>
-                <button type="submit">Sign In with Google</button>
+            <form >
+                <GoogleLoginButton onClick={this.onSubmit}>Sign In with Google</GoogleLoginButton>
 
                 {error && <p>{error.message}</p>}
             </form>
@@ -196,15 +202,15 @@ class SignInFacebookBase extends Component {
                 this.setState({ error });
             });
 
-        event.preventDefault();
+     
     };
 
     render() {
         const { error } = this.state;
 
         return (
-            <form onSubmit={this.onSubmit}>
-                <button type="submit">Sign In with Facebook</button>
+            <form >
+                <FacebookLoginButton onClick={this.onSubmit}>Sign In with Facebook</FacebookLoginButton>
 
                 {error && <p>{error.message}</p>}
             </form>
@@ -253,15 +259,15 @@ class SignInTwitterBase extends Component {
                 this.setState({ error });
             });
 
-        event.preventDefault();
+       
     };
 
     render() {
         const { error } = this.state;
 
         return (
-            <form onSubmit={this.onSubmit}>
-                <button type="submit">Sign In with Twitter</button>
+            <form >
+                <TwitterLoginButton onClick={this.onSubmit}>Sign In with Twitter</TwitterLoginButton>
 
                 {error && <p>{error.message}</p>}
             </form>

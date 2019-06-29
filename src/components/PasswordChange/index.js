@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { Button } from 'react-bootstrap';
 import { withFirebase } from '../Firebase';
 
 const INITIAL_STATE = {
@@ -41,7 +41,8 @@ class PasswordChangeForm extends Component {
             passwordOne !== passwordTwo || passwordOne === '';
 
         return (
-            <form onSubmit={this.onSubmit}>
+            <form onSubmit={this.onSubmit} className="changePassForm">
+                <div className="changePassInputs">
                 <input
                     name="passwordOne"
                     value={passwordOne}
@@ -55,10 +56,11 @@ class PasswordChangeForm extends Component {
                     onChange={this.onChange}
                     type="password"
                     placeholder="Confirm New Password"
-                />
-                <button disabled={isInvalid} type="submit">
-                    Reset My Password
-        </button>
+                    />
+                </div>
+                <Button className="changePassBtn" variant="outline-danger" disabled={isInvalid} type="submit">
+                    <i class="fas fa-key"></i>
+        </Button>
 
                 {error && <p>{error.message}</p>}
             </form>

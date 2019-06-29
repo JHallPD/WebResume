@@ -4,7 +4,8 @@ import { PasswordForgetForm } from '../PasswordForget';
 import PasswordChangeForm from '../PasswordChange';
 import { withFirebase } from '../Firebase';
 import { compose } from 'recompose';
-
+import { Button } from 'react-bootstrap';
+import { FacebookLoginButton, GoogleLoginButton, TwitterLoginButton } from "react-social-login-buttons";
 //functionality for account linking 
 //all signIn methods can be linked to one account
 //accounts need to be expanded on to allow for more use then just home page access
@@ -12,32 +13,44 @@ const SIGN_IN_METHODS = [
     {
         id: 'password',
         provider: null,
+        type: 'passLink',
     },
     {
         id: 'google.com',
         provider: 'googleProvider',
+        type: 'googleLink',
     },
     {
         id: 'facebook.com',
         provider: 'facebookProvider',
+        type: 'facebookLink',
     },
     {
         id: 'twitter.com',
         provider: 'twitterProvider',
+        type: 'twitterLink',
     },
 ];
 
 const AccountPage = () => (
+    <div className="mAccountDiv">
+
     <AuthUserContext.Consumer>
         {authUser => (
-            <div>
-                <h1>Account: {authUser.email}</h1>
-                <PasswordForgetForm />
-                <PasswordChangeForm />
-                <LoginManagement authUser={authUser} />
-            </div>
+            <div className="accountBox">
+                
+                    <h1>Account: {authUser.email}</h1>
+                    <p>Reset Your Password</p>
+                    <PasswordForgetForm />
+                    <p>Change Your Password</p>
+                    <PasswordChangeForm />
+                    <LoginManagement authUser={authUser} />
+                </div>
+            
         )}
-    </AuthUserContext.Consumer>
+            </AuthUserContext.Consumer>
+
+    </div>
 );
 
 class LoginManagementBase extends Component {
@@ -93,9 +106,9 @@ class LoginManagementBase extends Component {
         const { activeSignInMethods, error } = this.state;
 
         return (
-            <div>
-                Sign In Methods:
-        <ul>
+            <div >
+                <p>Sign In Methods:</p>
+                <ul className="socialBtns">
                     {SIGN_IN_METHODS.map(signInMethod => {
                         const onlyOneLeft = activeSignInMethods.length === 1;
                         const isEnabled = activeSignInMethods.includes(
@@ -111,6 +124,7 @@ class LoginManagementBase extends Component {
                                         signInMethod={signInMethod}
                                         onLink={this.onDefaultLoginLink}
                                         onUnlink={this.onUnlink}
+                                        btnType={signInMethod.type}
                                     />
                                 ) : (
                                         <SocialLoginToggle
@@ -119,6 +133,7 @@ class LoginManagementBase extends Component {
                                             signInMethod={signInMethod}
                                             onLink={this.onSocialLoginLink}
                                             onUnlink={this.onUnlink}
+                                            btnType={signInMethod.type}
                                         />
                                     )}
                             </li>
@@ -136,23 +151,64 @@ const SocialLoginToggle = ({
     signInMethod,
     onLink,
     onUnlink,
-}) =>
-    isEnabled ? (
-        <button
-            type="button"
-            onClick={() => onUnlink(signInMethod.id)}
-            disabled={onlyOneLeft}
-        >
-            Deactivate {signInMethod.id}
-        </button>
-    ) : (
-            <button
+    btnType
+}) => 
+    (isEnabled ? (
+
+        (signInMethod.type == 'googleLink' ? (
+            <GoogleLoginButton
                 type="button"
-                onClick={() => onLink(signInMethod.provider)}
+                onClick={() => onUnlink(signInMethod.id)}
+                disabled={onlyOneLeft}
             >
-                Link {signInMethod.id}
-            </button>
-        );
+                Deactivate {signInMethod.id}
+            </GoogleLoginButton>
+        ) : (signInMethod.type == 'facebookLink' ? (
+            <FacebookLoginButton
+                type="button"
+                onClick={() => onUnlink(signInMethod.id)}
+                disabled={onlyOneLeft}
+            >
+                Deactivate {signInMethod.id}
+            </FacebookLoginButton>
+            ) : (signInMethod.type == 'twitterLink' ? (
+                <TwitterLoginButton
+                    type="button"
+                    onClick={() => onUnlink(signInMethod.id)}
+                    disabled={onlyOneLeft}
+                >
+                    Deactivate {signInMethod.id}
+                </TwitterLoginButton>
+            ) : (null))))
+
+    ) : (
+            (signInMethod.type == 'googleLink' ? (
+                <GoogleLoginButton
+                    type="button"
+                    onClick={() => onLink(signInMethod.provider)}
+                >
+                    Link {signInMethod.id}
+                </GoogleLoginButton>
+            ) : (signInMethod.type == 'facebookLink' ? (
+                <FacebookLoginButton
+                    type="button"
+                    onClick={() => onLink(signInMethod.provider)}
+                >
+                    Link {signInMethod.id}
+                    </FacebookLoginButton>
+            ) : (signInMethod.type == 'twitterLink' ? (
+                    <TwitterLoginButton
+                        type="button"
+                        onClick={() => onLink(signInMethod.provider)}
+                    >
+                        Link {signInMethod.id}
+                    </TwitterLoginButton>
+            ): (null))))
+
+        ));
+
+
+
 
 class DefaultLoginToggle extends Component {
     constructor(props) {
@@ -186,15 +242,16 @@ class DefaultLoginToggle extends Component {
             passwordOne !== passwordTwo || passwordOne === '';
 
         return isEnabled ? (
-            <button
+            <Button variant="danger" className="turnOffPass"
                 type="button"
                 onClick={() => onUnlink(signInMethod.id)}
                 disabled={onlyOneLeft}
             >
-                Deactivate {signInMethod.id}
-            </button>
+                Turn Off Password
+            </Button>
         ) : (
-                <form onSubmit={this.onSubmit}>
+                <form onSubmit={this.onSubmit} className="passResetForm">
+                    <div className="changePassInputs">
                     <input
                         name="passwordOne"
                         value={passwordOne}
@@ -208,11 +265,12 @@ class DefaultLoginToggle extends Component {
                         onChange={this.onChange}
                         type="password"
                         placeholder="Confirm New Password"
-                    />
+                        />
+                    </div>
+                    <Button className="changePassBtn" variant="outline-danger" disabled={isInvalid} type="submit">
+                        <i class="fas fa-key"></i>
+                    </Button>
 
-                    <button disabled={isInvalid} type="submit">
-                        Link {signInMethod.id}
-                    </button>
                 </form>
             );
     }
