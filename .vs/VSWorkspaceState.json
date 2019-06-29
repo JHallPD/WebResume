@@ -1,16 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\src",
     "\\src\\components",
-    "\\src\\components\\App",
+    "\\src\\components\\Account",
+    "\\src\\components\\Admin",
+    "\\src\\components\\Contact",
     "\\src\\components\\Firebase",
-    "\\src\\components\\Navigation",
-    "\\src\\components\\PasswordChange",
-    "\\src\\components\\PasswordForget",
-    "\\src\\components\\SignIn",
+    "\\src\\components\\Footer",
+    "\\src\\components\\Session",
+    "\\src\\components\\SignUp",
     "\\src\\images"
   ],
-  "SelectedNode": "\\public\\index.html",
+  "SelectedNode": "\\.firebase",
   "PreviewInSolutionExplorer": false
 }
