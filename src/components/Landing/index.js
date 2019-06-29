@@ -19,7 +19,7 @@ const Landing = () => (
                 <p className='hdTxt'>Front-end Programming<br /> Critical Thinking & Problem Solving<br />A never give up attitude</p>
 
                 <h6 className='lndH6'>Current Site Functionality</h6>
-                <p className='hdTxt'>You must log in to use the contact form or home page.</p>
+                <p className='hdTxt'>You must log in to use the contact form.</p>
                 <p className='hdTxt'>In a rush? Click Resume + Supporting Docs</p>
 
                     <div className="signInContactRow">

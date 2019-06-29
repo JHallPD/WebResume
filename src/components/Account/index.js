@@ -157,6 +157,7 @@ const SocialLoginToggle = ({
 
         (signInMethod.type == 'googleLink' ? (
             <GoogleLoginButton
+                className='googleBtn'
                 type="button"
                 onClick={() => onUnlink(signInMethod.id)}
                 disabled={onlyOneLeft}
@@ -164,7 +165,8 @@ const SocialLoginToggle = ({
                 Deactivate {signInMethod.id}
             </GoogleLoginButton>
         ) : (signInMethod.type == 'facebookLink' ? (
-            <FacebookLoginButton
+                <FacebookLoginButton
+                className='facebookBtn'
                 type="button"
                 onClick={() => onUnlink(signInMethod.id)}
                 disabled={onlyOneLeft}
@@ -172,7 +174,8 @@ const SocialLoginToggle = ({
                 Deactivate {signInMethod.id}
             </FacebookLoginButton>
             ) : (signInMethod.type == 'twitterLink' ? (
-                <TwitterLoginButton
+                    <TwitterLoginButton
+                        className='twitterBtn'
                     type="button"
                     onClick={() => onUnlink(signInMethod.id)}
                     disabled={onlyOneLeft}
@@ -184,20 +187,23 @@ const SocialLoginToggle = ({
     ) : (
             (signInMethod.type == 'googleLink' ? (
                 <GoogleLoginButton
+                    className='googleBtn'
                     type="button"
                     onClick={() => onLink(signInMethod.provider)}
                 >
                     Link {signInMethod.id}
                 </GoogleLoginButton>
             ) : (signInMethod.type == 'facebookLink' ? (
-                <FacebookLoginButton
+                    <FacebookLoginButton
+                    className='facebookBtn'
                     type="button"
                     onClick={() => onLink(signInMethod.provider)}
                 >
                     Link {signInMethod.id}
                     </FacebookLoginButton>
             ) : (signInMethod.type == 'twitterLink' ? (
-                    <TwitterLoginButton
+                        <TwitterLoginButton
+                        className='twitterBtn'
                         type="button"
                         onClick={() => onLink(signInMethod.provider)}
                     >

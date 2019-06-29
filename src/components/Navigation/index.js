@@ -63,6 +63,9 @@ const NavigationNonAuth = () => (
                     <NavDropdown.Item href="#Landing" >
                         <Link className="links" href="#Landing" to={ROUTES.LANDING}>Landing</Link>
                     </NavDropdown.Item>
+                    <NavDropdown.Item href="#Home">
+                        <Link className="links" href="#Home" to={ROUTES.HOME}>Home</Link>
+                    </NavDropdown.Item>
                     <NavDropdown.Item href="#SignIn">
                         <Link className="links" href="#SignIn" to={ROUTES.SIGN_IN}>Sign In</Link>
                     </NavDropdown.Item>

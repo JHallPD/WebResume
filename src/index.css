@@ -845,13 +845,57 @@ bubbleLoad {
     }
 .socialBtns {
     width: 100%;
-    display:flex;
-    padding: 0em;
-    justify-content:center;
-    align-content:center;
-    align-items:center;
-    flex-direction:column;
+    display: flex;
+    padding: 0em 1em 0em 1em;
+    margin: 0em 0em 0em 0em;
+    flex-direction: column;
 }
+    .socialBtns li {
+        display: flex;
+        width: 100%;
+        margin: 0em 0em 0em 0em;
+    }.socialBtns li div {
+         width:100%;
+         margin:0.2em 0.2em 0.2em 0.2em!important;
+     }
+     .googleBtn {
+         margin: 0em!important;
+     }
+        .googleBtn div {
+            margin: 0em !important;
+            padding: 0em !important;
+            font-size: 14px !important;
+            clear: both;
+            display: inline-block;
+            white-space: nowrap;
+            justify-content:flex-start!important;
+        }
+.facebookBtn {
+    margin: 0em !important;
+}
+
+    .facebookBtn div {
+        margin: 0em !important;
+        padding: 0em !important;
+        font-size: 14px !important;
+        clear: both;
+        display: inline-block;
+        white-space: nowrap;
+        justify-content: flex-start !important;
+    }
+.twitterBtn {
+    margin: 0em !important;
+}
+
+    .twitterBtn div {
+        margin: 0em !important;
+        padding: 0em !important;
+        font-size: 14px !important;
+        clear: both;
+        display: inline-block;
+        white-space: nowrap;
+        justify-content: flex-start !important;
+    }
 .passResetForm {
     width: 100%;
     margin: 0em auto 0em auto;
@@ -861,7 +905,8 @@ bubbleLoad {
 }
 .turnOffPass {
     display: flex;
-    width: 200px;
+    width: 100%;
+    margin: 0em 0.3em .2em 0.3em;
     justify-content:center;
     align-self:center;
 }

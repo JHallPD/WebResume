@@ -249,4 +249,4 @@ function changeBackground(e) {
 
 const condition = authUser => !!authUser;
 
-export default compose(withEmailVerification,withAuthorization(condition),)(HomePage);
+export default compose(HomePage);
