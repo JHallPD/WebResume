@@ -2,7 +2,9 @@
 
 work-in progress portfolio. 
 Currently Using reactjs and firebase. 
+
 Hosted on Firebase
+
 https://webresume-a8952.firebaseapp.com/
 
 
