@@ -30,6 +30,7 @@ const HomePage = () => (
             
         </div>
         <div className="wideSumEmp">
+            <div className="expandBox">
         <div className="summaryBox">
 
             <div className="sumBoxObj">
@@ -43,11 +44,13 @@ const HomePage = () => (
                 <p>test test test test test test test test test test.
                     test test test test test test test test test test.
                     test test test test test test test test test test.</p>
-            </div>
+                </div>
+                
             <div className="sumBoxLang">                                             
                 <h6>Programming Languages </h6>
                 <p>Java, JavaScript, React-Native, Node.js, React,Python, C#, SQL, ASP.Net.</p>
-            </div>
+                    </div>
+                </div>
             </div>
         <div className="employmentBox">
             <h6>Employment History</h6>
