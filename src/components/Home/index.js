@@ -58,7 +58,7 @@ const HomePage = () => (
                         <p className="companyLoc">CarFax Canada Kitchener, ON</p>
                         <p className="dateSpan"> Sept-Dec 2018</p>
                     </div>
-                    <Collapsible trigger="Details">
+                        <Collapsible trigger="Details">
                         
                         <div className="jobInfo">
                             <br />
