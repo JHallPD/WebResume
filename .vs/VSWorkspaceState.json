@@ -3,14 +3,14 @@
     "",
     "\\src",
     "\\src\\components",
-    "\\src\\components\\Account",
-    "\\src\\components\\Admin",
     "\\src\\components\\App",
+    "\\src\\components\\Contact",
+    "\\src\\components\\Home",
     "\\src\\components\\Session",
     "\\src\\components\\SignIn",
     "\\src\\components\\SignUp",
     "\\src\\images"
   ],
-  "SelectedNode": "\\src\\components\\Home\\index.js",
+  "SelectedNode": "\\src\\components\\Contact\\index.js",
   "PreviewInSolutionExplorer": false
 }
