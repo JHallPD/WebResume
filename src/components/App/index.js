@@ -16,8 +16,8 @@ import '../../index.css';
 //app file to bring components together and create routing
 const App = () => (
     <Router>
-        
-        <div>
+
+        <div className="mainDiv">
 
             <Navigation />
 

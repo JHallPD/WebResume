@@ -173,9 +173,7 @@ const HomePage = () => (
                     </Card.Footer>
                 </Card>
             </a>
-        </CardDeck>
-        <div className="wideCard">
-            <a className="linkNoLineFull" href={"https://github.com/JHallPD/Resume"}>
+            <a className="linkNoLine" href={"https://github.com/JHallPD/Resume"}>
                 <Card className="bg-dark text-white cardFull">
                     <Card.Img className="cardImg1" src="./././Spectrum-Gradient.svg" alt="Jeff Facts 3" />
                     <Card.ImgOverlay>
@@ -183,11 +181,24 @@ const HomePage = () => (
                         <Card.Text>
                             placeholder repo.
                     </Card.Text>
-                        <Card.Text>Last updated 2019-06-28</Card.Text>
+                        <Card.Text>Last updated 2019-06-30</Card.Text>
                     </Card.ImgOverlay>
                 </Card>
             </a>
-        </div>
+            <a className="linkNoLine" href={"https://github.com/JHallPD/Resume"}>
+                <Card className="bg-dark text-white cardFull">
+                    <Card.Img className="cardImg1" src="./././Spectrum-Gradient.svg" alt="Jeff Facts 3" />
+                    <Card.ImgOverlay>
+                        <Card.Title>Resume</Card.Title>
+                        <Card.Text>
+                            placeholder repo.
+                    </Card.Text>
+                        <Card.Text>Last updated 2019-06-30</Card.Text>
+                    </Card.ImgOverlay>
+                </Card>
+            </a>
+        </CardDeck>
+
         <div className="interestBox">
         <h5>Interests </h5>
         <p>Competitive Sports-Playing competitive basketball and volleyball is something I have enjoyed for most of my early life.</p>
