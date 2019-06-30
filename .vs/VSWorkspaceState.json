@@ -1,8 +1,8 @@
 {
   "ExpandedNodes": [
     "",
+    "\\src",
     "\\src\\components",
-    "\\src\\components\\Account",
     "\\src\\components\\Admin",
     "\\src\\components\\Contact",
     "\\src\\components\\Firebase",
@@ -11,6 +11,6 @@
     "\\src\\components\\SignUp",
     "\\src\\images"
   ],
-  "SelectedNode": "\\.firebase",
+  "SelectedNode": "\\.gitignore",
   "PreviewInSolutionExplorer": false
 }
