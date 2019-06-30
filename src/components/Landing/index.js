@@ -37,7 +37,7 @@ const Landing = () => (
                             </Link>)}
                         </div>
                 <div className='btnRow'>
-                    <a className="links" href={"https://github.com/JHallPD/Resume/blob/master/ResumeJHall.docx?raw=true"} >
+                    <a className="links" href={"https://github.com/JHallPD/Resume/raw/master/ResumeJHall.pdf"} >
                         <Button className="resumeBtn" type="button" variant="outline-info">
                             Resume
                         </Button>
