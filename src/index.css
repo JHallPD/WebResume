@@ -372,7 +372,7 @@ bubbleLoad {
     align-content: center;
     align-items: center;
     justify-content: center;
-    margin: 0em auto 2em auto;
+    margin: 0em auto 1em auto;
     width: 100%;
     background-color: #373940;
     border-radius: 1rem;
@@ -976,6 +976,7 @@ bubbleLoad {
     }
     .lndHeader {
         width: 80%;
+        max-width:700px;
     }
     .hmDeck {
         flex-direction:row;

@@ -41,9 +41,13 @@ const HomePage = () => (
             <div className="sumBoxSkills">
                 <h5>Summary of Skills</h5> 
             
-                <p>test test test test test test test test test test.
-                    test test test test test test test test test test.
-                    test test test test test test test test test test.</p>
+                        <p>Leadership.
+                            Learning.
+                            Critical Thinking.
+                            Group & Independent Work.
+                            Organization & Planning.
+                            Adatability.
+                            </p>
                 </div>
                 
             <div className="sumBoxLang">                                             
