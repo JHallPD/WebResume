@@ -36,7 +36,7 @@ const HomePage = () => (
             <div className="sumBoxObj">
                 <h5>Objective Summary</h5> 
            
-                <p>Looking for fulltime employment where I can continue to improve my skills and abilities to grow as a developer while making an impact on the team.</p>
+                <p>Looking for fulltime employment where I can continue to improve my skills and abilities to grow as a developer while making a posative impact on the team.</p>
             </div>
             <div className="sumBoxSkills">
                 <h5>Summary of Skills</h5> 
@@ -46,7 +46,7 @@ const HomePage = () => (
                             Critical Thinking.
                             Group & Independent Work.
                             Organization & Planning.
-                            Adatability.
+                            Adaptability.
                             </p>
                 </div>
                 
@@ -140,8 +140,8 @@ const HomePage = () => (
                     <p>Georgian College Barrie, ON 2016-2018</p>
                 </div>
                 <div className="secondDiploma">
-                    <p>Business Diploma Canadore College</p>
-                    <p>North Bay, ON 2013-2015</p>
+                    <p>Business Diploma</p>
+                    <p>Canadore College North Bay, ON 2013-2015</p>
                 </div>
             </div>
 
@@ -208,10 +208,10 @@ const HomePage = () => (
 
         <div className="interestBox">
         <h5>Interests </h5>
-        <p>Competitive Sports-Playing competitive basketball and volleyball is something I have enjoyed for most of my early life.</p>
-        <p>Camping/Hiking-Growing up in Northern Ontario instilled a love for nature and discovery from a young age.</p>
-        <p>Video Games- General love for video games especially the sim & management genres with the dream of starting my own development company.</p>
-        <p>Personal Projects- Currently developing phone apps in my spare time, along with some blockchain research.</p>
+        <p>Competitive Sports: Playing competitive basketball and volleyball is something I have enjoyed for most of my early life.</p>
+        <p>Camping/Hiking: Growing up in Northern Ontario instilled a love for nature and discovery from a young age.</p>
+        <p>Video Games: General love for video games especially the sim & management genres with the dream of starting my own development company.</p>
+        <p>Personal Projects: Currently developing phone apps in my spare time, along with some blockchain research.</p>
         <br/>
             <h2>References Available up Request</h2>
         </div>

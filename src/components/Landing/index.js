@@ -16,7 +16,7 @@ const Landing = () => (
 
                 <h6 className='lndH6'>A few things I bring to the table</h6>
 
-                <p className='hdTxt'>Front-end Programming<br /> Critical Thinking & Problem Solving<br />A never give up attitude</p>
+                <p className='hdTxt'>Front-End Programming<br /> Critical Thinking & Problem Solving<br />A Relentless Attitude</p>
 
                 <h6 className='lndH6'>Current Site Functionality</h6>
                 <p className='hdTxt'>You must log in to use the contact form.</p>
