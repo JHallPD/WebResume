@@ -18,12 +18,7 @@ import Collapsible from 'react-collapsible';
 //potential for chat bot
 const HomePage = () => (
     <div className="mDiv">
-        <div className="BtnsDiv">
-            <Button variant="warning" className="bgBtn" onClick={changeBackground}><i class="fas fa-magic "></i></Button>
-            <Link className="links" href="#SignUp" to={ROUTES.CONTACT}>
-                <Button variant="outline-light" className="contactBtn" onClick={changeBackground}><i class="fa fa-envelope"></i></Button>
-            </Link>
-        </div>
+
         <div className="mTitle">
         <h1 >JEFF HALL NEEDS A JOB</h1>
             <h4>jeffahall94@gmail.com | 76 Pinnacle Drive, Kitchener, ON N2P 1C5</h4>

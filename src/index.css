@@ -119,8 +119,20 @@ btn-danger {
     display: flex;
     font-size: 100%;
     height: 100%;
+    align-self:center;
     justify-content: center;
     padding: 0px 0px 0px 0px;
+}
+.linksM {
+    display: flex;
+    font-size: 100%;
+    height: 100%;
+    align-self: center;
+    justify-content: center;
+    padding: 0px 0px 0px 0px;
+    margin: 0em 2px 0em 2px;
+    color:#fff;
+    text-decoration:underline;
 }
 .dropdown-item {
     text-align: center;
@@ -180,8 +192,18 @@ bubbleLoad {
     width: 26px;
     font-size: 15px;
 }
+.contactBtnLnd {
+    position: fixed;
+    top: 7%;
+    right: 8px;
+    margin: 0em 0em 0em 0em;
+    padding: 0px 0px 0px 0px;
+    height: 22px;
+    width: 26px;
+    font-size: 15px;
+    color:black;
+}
 .mDiv {
-    position: relative;
     top: 0;
     left: 0;
     width: 100%;
@@ -190,10 +212,9 @@ bubbleLoad {
     justify-content: center;
     flex-direction: column;
     padding: 0em 12% 2em 12%;
-    margin: 0em 0em 0em 0em;
-    background-color: rgba(255, 255, 255, 0.80);
+    margin: 1em 0em 0em 0em;
     color: #ffffff;
-    background-image: url('images/Large-Triangles.svg');
+
 }
 .BtnsDiv {
 
@@ -456,19 +477,15 @@ bubbleLoad {
 
 /** Landing CSS **/
 .lndMain {
-    position: relative;
-    top: 0;
+    top: 7em;
     left: 0;
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    margin: 0em 0em 0em 0em;
-    padding: 4em 5% 12% 5%;
+    margin: 10em 0em 0em 0em;
+
     line-height: 1.6;
-    background-color: #92bde7;
-    background-image: url('images/new.jpg');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+
 }
 .lndHeader {
     margin: 0em auto 8em auto;
@@ -526,12 +543,6 @@ bubbleLoad {
     padding: 0em 0.2em 0em 0.2em;
     margin: 0em 0em 0em 0em;
 }
-.lndContact {
-    height: 30px;
-    width: 70px;
-    padding: 0em 0.2em 0em 0.2em;
-    margin: 0em 0em 0em 0em;
-}
 /** Footer CSS **/
 .mainFooter {
     background-color: #373940;
@@ -572,8 +583,6 @@ bubbleLoad {
     margin: 0em 0em 0em 0em;
     padding: 4em 1em 0em 1em;
     line-height: 1.6;
-    background-color: #92bde7;
-    background-image: url('images/Endless-Constellation.svg');
 
 }
 .formContainer {
@@ -645,7 +654,7 @@ bubbleLoad {
         width:100%;
 }
 .contactImage {
-    content: url();
+    content: url("/JHall.jpg");
     border: 2px solid rgba(130,130,130,1);
     margin: 1em 0em 0em 0em;
     height: 60%;
@@ -672,7 +681,6 @@ bubbleLoad {
     padding: 4em 1em 2em 1em;
     margin: 0em 0em 0em 0em;
     text-align: center;
-    background-image: url('images/Protruding-Squares.svg');
 }
 .signInBox {
     width: 100%;
@@ -724,7 +732,7 @@ bubbleLoad {
     align-self: center;
     text-align: center;
     box-sizing: border-box;
-    background-image: url('images/Honey-Comb.svg');
+
 }
 .signUpBox {
     width: 100%;
@@ -771,7 +779,7 @@ bubbleLoad {
     align-self: center;
     text-align: center;
     box-sizing: border-box;
-    background-image: url('images/Tortoise-Shell.svg');
+
 }
 .accountBox {
     width: 100%;
@@ -967,12 +975,9 @@ bubbleLoad {
         margin: 0em 2em 0em 2em;
     }
     .lndMain {
-        padding: 10em 5% 12% 5%;
-        height: 100%;
-        background-color: #92bde7;
-        background-image: url('images/old.jpg');
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
+
+        height: 90.6vh;
+
     }
     .lndHeader {
         width: 80%;
@@ -1215,15 +1220,22 @@ bubbleLoad {
         width: 52px;
         font-size: 30px;
     }
+    .contactBtnLnd {
+        position: fixed;
+        top: 7%;
+        right: 8px;
+        margin: 0em 0em 0em 0em;
+        padding: 0px 0px 0px 0px;
+        height: 44px;
+        width: 52px;
+        font-size: 30px;
+    }
 }
 @media(min-width:800px){
     .lndMain {
-        padding: 10em 5% 12% 5%;
-        height: 100%;
-        background-color: #92bde7;
-        background-image: url('images/old.jpg');
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
+
+        height: 90.6vh;
+
     }
 
     .lndHeader {
@@ -1233,12 +1245,9 @@ bubbleLoad {
 }
 @media(min-width:900px) {
     .lndMain {
-        padding: 10em 5% 12% 5%;
-        height: 100%;
-        background-color: #92bde7;
-        background-image: url('images/old.jpg');
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
+
+        height: 90.6vh;
+
     }
 
     .lndHeader {
@@ -1291,7 +1300,7 @@ bubbleLoad {
         max-width: 380px;
     }
     .lndMain {
-        height: 100%;
+        height: 90.6vh;
     }
 
 }
@@ -1347,5 +1356,9 @@ bubbleLoad {
     .mDiv {
         padding: 6em 1em 2em 1em;
         height: 90.6vh;
+    }
+    .lndMain {
+        height: 90.6vh;
+        margin: 14em 0em 0em 0em;
     }
 }

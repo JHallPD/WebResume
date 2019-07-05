@@ -124,7 +124,4 @@ const contactPageFirebase = compose(
     withFirebase,
 )(contactPageBase);
 
-export default compose(
-    withEmailVerification,
-    withAuthorization(condition),
-)(contactPageFirebase);
+export default contactPageFirebase;

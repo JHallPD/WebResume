@@ -27,12 +27,14 @@ const NavigationAuth = ({ authUser }) => (
         <Navbar.Brand className="banner">Jeff's Portfolio</Navbar.Brand>
         <Navbar.Collapse className="justify-content-end">
             <Nav className="linksDiv">
+                <Link className="linksM" href="#Landing" to={ROUTES.LANDING}>Landing</Link>
+                <Link className="linksM" href="#Home" to={ROUTES.HOME}>Home</Link>
                 <NavDropdown title={"Signed In as: " + authUser.username} id="basic-nav-dropdown">
                     <NavDropdown.Item href="#Landing" >
-                        <Link className="links" href="#Landing" to={ROUTES.LANDING}>Landing</Link>
+                        
                     </NavDropdown.Item>
                     <NavDropdown.Item href="#Home">
-                        <Link className="links" href="#Home" to={ROUTES.HOME}>Home</Link>
+                        
                     </NavDropdown.Item>
                     <NavDropdown.Item href="#Account">
                         <Link className="links" href="#Account" to={ROUTES.ACCOUNT}> Account </Link>
@@ -59,6 +61,8 @@ const NavigationNonAuth = () => (
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
             <Nav className="linksDiv">
+                <Link className="linksM" href="#Landing" to={ROUTES.LANDING}>Landing</Link>
+                <Link className="linksM" href="#Home" to={ROUTES.HOME}>Home</Link>
                 <NavDropdown title={"Please Sign In"} alignRight id="basic-nav-dropdown">
                     <NavDropdown.Item href="#Landing" >
                         <Link className="links" href="#Landing" to={ROUTES.LANDING}>Landing</Link>
